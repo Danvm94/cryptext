@@ -6,7 +6,7 @@
   font-family: "Roboto", sans-serif;
   color: #ffffff;
 }
-
+/* Body styles */
 body {
   height: 100%;
   margin: 0;
@@ -15,21 +15,21 @@ body {
   flex-direction: column;
   background-color: #000000;
 }
-
+/* Logo styles */
 .logo {
   /* Add a top margin for the logo container to 20px, so that the logo is not that high on the webpage */
   margin: 20px;
   display: flex;
   justify-content: center;
 }
-
+/* Brief About styles */
 .brief-about {
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 5px;
-  background-color: #880d0d;
+  background-color: #3e4357;
   max-width: 800px;
   margin: 20px auto;
-  padding: 20px;
+  padding: 0px 20px;
 }
