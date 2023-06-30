@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrypText</title>
+    <!-- Set the icon on the bookmark -->
+    <!-- meta description for website -->
+    <meta name="description"
+        content="CrypText is a comprehensive website offering secure text message encryption using Caesar, Vigenere, RSA, and AES algorithms. Protect your privacy, enhance data security, and ensure confidentiality with our versatile encryption methods.">
+    <!-- meta keywords for website -->
+    <meta name="keywords"
+        content="CrypText, text message encryption, secure communication, Caesar cipher, Vigenere cipher, RSA encryption, AES encryption, privacy, data security, confidentiality, encryption methods">
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/images/locker.ico">
+    <!-- CSS Style for webpage -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- font awesome script  -->
+    <script src="https://kit.fontawesome.com/c7dbda0798.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <!-- Section for the main website's logo -->
+    <div class="logo">
+        <img class="logo__image" src="./assets/images/locker.ico" alt="a blue lock">
+        <h1 class="logo__title">CypherText</h1>
+    </div>
+    <!-- Brief about section with some information about the website -->
+    <div class="brief-about">
+        <h2>About</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.</p>
+    </div>
+    <!-- Section for the Encrypt Text -->
+    <h2 class="encrypt-box__title-two">Encrypt Text</h2>
+    <div class="encrypt-box">
+        <form class="encrypt-box__type" action="">
+            <input class="encrypt-box__text" type="text">
+            <h3 class="encrypt-box__title-three">Encryption Type</h3>
+            <input type="radio" id="caesar" name="encryption" value="caesar">
+            <label for="caesar">Caesar Cipher</label><br>
+            <input type="radio" id="vigenere" name="encryption" value="vigenere">
+            <label for="caesar">Vigenère Cipher</label><br>
+            <input type="radio" id="rsa" name="encryption" value="rsa">
+            <label for="caesar">RSA Encryption</label><br>
+            <input type="radio" id="aes" name="encryption" value="aes">
+            <label for="aes">AES Encryption</label><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <div class="encrypt-box__result">
+            <p>Place holder
+        </div>
+    </div>
+    <!-- Section for the Decrypt Text -->
+    <h2 class="encrypt-box__title-two">Decrypt Text</h2>
+    <div class="encrypt-box">
+        <form class="encrypt-box__type" action="">
+            <input class="encrypt-box__text" type="text">
+            <h3 class="encrypt-box__title-three">Decrypt Type</h3>
+            <input type="radio" id="caesar" name="decrypt" value="caesar">
+            <label for="caesar">Caesar Cipher</label><br>
+            <input type="radio" id="vigenere" name="decrypt" value="vigenere">
+            <label for="caesar">Vigenère Cipher</label><br>
+            <input type="radio" id="rsa" name="decrypt" value="rsa">
+            <label for="caesar">RSA Encryption</label><br>
+            <input type="radio" id="aes" name="decrypt" value="aes">
+            <label for="aes">AES Encryption</label><br>
+            <input type="submit" value="Submit">
+        </form>
+        <div class="encrypt-box__result">
+            <p>Place holder
+        </div>
+    </div>
+</body>
+
+</html>
