@@ -43,18 +43,20 @@
             <div class="encrypt-box__radio-group">
                 <h3 class="encrypt-box__title-three">Encryption / Decryption</h3>
                 <label class="encrypt-box__radio-button">
-                    <input class="encrypt-box__option" type="radio" id="caesar" name="encryption" value="caesar">
+                    <input class="encrypt-box__option" type="radio" id="encrypt" name="encryption" value="encrypt"
+                        required>
                     Encrypt
                 </label>
                 <label class="encrypt-box__radio-button">
-                    <input class="encrypt-box__option" type="radio" id="vigenere" name="encryption" value="vigenere">
+                    <input class="encrypt-box__option" type="radio" id="decrypt" name="encryption" value="decrypt">
                     Decrypt
                 </label>
             </div>
             <div class="encrypt-box__radio-group">
                 <h3 class="encrypt-box__title-three">Encryption Type</h3>
                 <label class="encrypt-box__radio-button">
-                    <input class="encrypt-box__option" type="radio" id="caesar" name="encryption-type" value="caesar">
+                    <input class="encrypt-box__option" type="radio" id="caesar" name="encryption-type" value="caesar"
+                        required>
                     Caesar Cipher
                 </label>
                 <label class="encrypt-box__radio-button">
@@ -69,7 +71,7 @@
         </form>
         <div class="encrypt-box__result">
             <h2>Result</h2>
-            <textarea class="encrypt-box__text" rows="4"></textarea>
+            <textarea class="encrypt-box__text" rows="4" readonly></textarea>
         </div>
     </div>
 </body>
