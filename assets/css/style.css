@@ -48,9 +48,22 @@ body {
   width: 100%;
   max-width: 800px;
   margin: 20px auto;
-  padding: 0px 0px;
+  padding: 10px 0px;
 }
-/* Input Text area in Encrpt Box */
+/* Input Text area in Encrypt Box */
 .encrypt-box__text {
+  width: 90%;
+  height: 200px;
+}
+/* Encrypt Box Form styles */
+.encrypt-box__form {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* Encrypt Box Div that contains the radio options */
+.encrypt-box__radio-group {
+  display: flex;
+  padding: 20px;
 }

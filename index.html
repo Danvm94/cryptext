@@ -40,25 +40,31 @@
     <!-- Section for the Encrypt Text -->
     <div class="encrypt-box">
         <h2 class="encrypt-box__title-two">Encrypt Text</h2>
-        <form class="encrypt-box__type" action="">
+        <form class="encrypt-box__form" action="">
             <input class="encrypt-box__text" type="text">
             <h3 class="encrypt-box__title-three">Encryption Type</h3>
-            <input type="radio" id="caesar" name="encryption" value="caesar">
-            <label for="caesar">Caesar Cipher</label><br>
-            <input type="radio" id="vigenere" name="encryption" value="vigenere">
-            <label for="caesar">Vigenère Cipher</label><br>
-            <input type="submit" value="Submit">
+            <div class="encrypt-box__radio-group">
+                <input class="encrypt-box__option" type="radio" id="caesar" name="encryption" value="caesar">
+                <label class="encrypt-box__option" for="caesar">Caesar Cipher</label><br>
+                <input class="encrypt-box__option" type="radio" id="vigenere" name="encryption" value="vigenere">
+                <label class="encrypt-box__option" for="caesar">Vigenère Cipher</label><br>
+            </div>
+            <input class="encrypt-box__option" type="submit" value="Submit">
+            <div class="encrypt-box__result">
+                <p id="encryption-result">
+            </div>
         </form>
+    </div>
 
-        <div class="encrypt-box__result">
-            <p>Place holder
-        </div>
+    <div class="encrypt-box__result">
+        <p>Place holder
+    </div>
     </div>
     <!-- Section for the Decrypt Text -->
     <div class="encrypt-box">
         <h2 class="encrypt-box__title-two">Decrypt Text</h2>
         <form class="encrypt-box__type" action="">
-            <input class="encrypt-box__text" type="text">
+            <input class="encrypt-box__form" type="text">
             <h3 class="encrypt-box__title-three">Decrypt Type</h3>
             <input type="radio" id="caesar" name="decrypt" value="caesar">
             <label for="caesar">Caesar Cipher</label><br>
