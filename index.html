@@ -41,6 +41,7 @@
     <div class="encrypt-box">
         <form class="encrypt-box__form" action="">
             <div class="encrypt-box__radio-group">
+                <h3 class="encrypt-box__title-three">Encryption / Decryption</h3>
                 <label class="encrypt-box__radio-button">
                     <input class="encrypt-box__option" type="radio" id="caesar" name="encryption" value="caesar">
                     Encrypt
@@ -50,8 +51,6 @@
                     Decrypt
                 </label>
             </div>
-            <textarea class="encrypt-box__text" placeholder="Type your text here (500 char max)..." rows="4"
-                maxlength="500"></textarea>
             <div class="encrypt-box__radio-group">
                 <h3 class="encrypt-box__title-three">Encryption Type</h3>
                 <label class="encrypt-box__radio-button">
@@ -64,6 +63,8 @@
                     Vigenère Cipher
                 </label>
             </div>
+            <textarea class="encrypt-box__text" placeholder="Type your text here (500 char max)..." rows="4"
+                maxlength="500"></textarea>
             <input class="encrypt-box__submit" type="submit" value="Submit">
         </form>
         <div class="encrypt-box__result">
