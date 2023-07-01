@@ -29,9 +29,14 @@ body {
   align-items: center;
   border-radius: 5px;
   background-color: #3e4357;
+  width: 100%;
   max-width: 800px;
   margin: 20px auto;
-  padding: 0px 20px;
+  padding: 0px 00px;
+}
+/* Bried About Text styles */
+.brief-about__text {
+  margin: 10px;
 }
 /* Encrypt Box styles */
 .encrypt-box {
@@ -43,5 +48,9 @@ body {
   width: 100%;
   max-width: 800px;
   margin: 20px auto;
-  padding: 0px 20px;
+  padding: 0px 0px;
+}
+/* Input Text area in Encrpt Box */
+.encrypt-box__text {
+  width: 100%;
 }
