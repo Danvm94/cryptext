@@ -56,6 +56,8 @@ body {
   height: 100px;
   resize: none;
   color: #000000;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
 }
 /* Encrypt Box Form styles */
 .encrypt-box__form {
@@ -67,6 +69,8 @@ body {
 /* Encrypt Box Div that contains the radio options */
 .encrypt-box__radio-group {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   padding: 20px;
 }
 /* Encrypt Box Div that contains the result */
@@ -75,6 +79,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  display: none;
+}
+/* Encrypt Box div's title */
+.encrypt-box__title-three {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 /* Encrypt Box Submit Button */
 .encrypt-box__submit {
@@ -84,6 +95,27 @@ body {
   border-radius: 5px;
   cursor: pointer;
   font-size: 18px;
-  font-weight: 400;
   min-width: 100px;
+  font-weight: 600;
+}
+/* Encrypt Box radio buttons */
+.encrypt-box__radio-button {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #92939d;
+  color: #000000;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #92939d;
+  font-weight: 600;
+  cursor: pointer;
+}
+/* Encrypt Box radio button change when selected */
+/* When encrypt-box__option is checked, it will look after encrypt-box__radio-button to change it's properties*/
+.encrypt-box__radio-button:has(.encrypt-box__option:checked) {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

@@ -39,37 +39,36 @@
     </div>
     <!-- Section for the Encrypt Text -->
     <div class="encrypt-box">
-        <h2 class="encrypt-box__title-two">Encrypt Text</h2>
         <form class="encrypt-box__form" action="">
-            <textarea class="encrypt-box__text" rows="4" maxlength="500"></textarea>
-            <h3 class="encrypt-box__title-three">Encryption Type</h3>
             <div class="encrypt-box__radio-group">
-                <input class="encrypt-box__option" type="radio" id="caesar" name="encryption" value="caesar">
-                <label class="encrypt-box__option" for="caesar">Caesar Cipher</label><br>
-                <input class="encrypt-box__option" type="radio" id="vigenere" name="encryption" value="vigenere">
-                <label class="encrypt-box__option" for="caesar">Vigenère Cipher</label><br>
+                <label class="encrypt-box__radio-button">
+                    <input class="encrypt-box__option" type="radio" id="caesar" name="encryption" value="caesar">
+                    Encrypt
+                </label>
+                <label class="encrypt-box__radio-button">
+                    <input class="encrypt-box__option" type="radio" id="vigenere" name="encryption" value="vigenere">
+                    Decrypt
+                </label>
+            </div>
+            <textarea class="encrypt-box__text" placeholder="Type your text here (500 char max)..." rows="4"
+                maxlength="500"></textarea>
+            <div class="encrypt-box__radio-group">
+                <h3 class="encrypt-box__title-three">Encryption Type</h3>
+                <label class="encrypt-box__radio-button">
+                    <input class="encrypt-box__option" type="radio" id="caesar" name="encryption-type" value="caesar">
+                    Caesar Cipher
+                </label>
+                <label class="encrypt-box__radio-button">
+                    <input class="encrypt-box__option" type="radio" id="vigenere" name="encryption-type"
+                        value="vigenere">
+                    Vigenère Cipher
+                </label>
             </div>
             <input class="encrypt-box__submit" type="submit" value="Submit">
         </form>
         <div class="encrypt-box__result">
             <h2>Result</h2>
             <textarea class="encrypt-box__text" rows="4"></textarea>
-        </div>
-    </div>
-    <!-- Section for the Decrypt Text -->
-    <div class="encrypt-box">
-        <h2 class="encrypt-box__title-two">Decrypt Text</h2>
-        <form class="encrypt-box__type" action="">
-            <input class="encrypt-box__form" type="text">
-            <h3 class="encrypt-box__title-three">Decrypt Type</h3>
-            <input type="radio" id="caesar" name="decrypt" value="caesar">
-            <label for="caesar">Caesar Cipher</label><br>
-            <input type="radio" id="vigenere" name="decrypt" value="vigenere">
-            <label for="caesar">Vigenère Cipher</label><br>
-            <input type="submit" value="Submit">
-        </form>
-        <div class="encrypt-box__result">
-            <p>Place holder
         </div>
     </div>
 </body>
