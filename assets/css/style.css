@@ -67,8 +67,24 @@ body {
   flex-direction: column;
   align-items: center;
 }
-/* Encrypt Box Div that contains the radio options */
-.encrypt-box__radio-group {
+/* Encrypt Box Div that contains the radio options for encryption / decryption */
+.encrypt-box__encryption-decryption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 5px;
+  width: 93%;
+}
+/* Encrypt Box Div that contains the radio options for encryption type */
+.encrypt-box__encryption-type {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 5px;
+  width: 93%;
+}
+/* Encrypt Box Div that contains the the input text, submit and result */
+.encrypt-box__final {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
