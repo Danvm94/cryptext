@@ -53,6 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
 This function is designed for the Caesar Cipher method. It receives an input parameter called 'encryption' which should be set to either 'encrypt' or 'decrypt'. Based on the chosen option, the method will perform encryption or decryption on the text using the Caesar Cipher technique.
 */
 function caesarEncryption(encryption, textInput) {
+  //Alphabet list that contains all characters
   const alphabet = [
     "A",
     "B",
@@ -81,14 +82,22 @@ function caesarEncryption(encryption, textInput) {
     "Y",
     "Z",
   ];
+  //outputResult variable will store the final encrypted text
   let outputResult = "";
-  console.log(`the encryption is: ${encryption}`);
+  //Check if the method is encrypt or decrypt
   if (encryption === "encrypt") {
-    console.log("cai aqui");
+    //For each char in textInput string
     for (let index = 0; index < textInput.length; index++) {
+      //char variable to store each char from textInput string
       let char = textInput[index];
-      outputResult += char;
-      console.log(char);
+      //shift variable to store the number for Caesar Cipher
+      let shift = 1;
+      //newCharIndex variable to store the index of the new encrypted char
+      let newCharIndex = (alphabet.indexOf(char.toUpperCase()) + shift) % 26;
+      //newChar variable to store the new encrypted char
+      let newChar = alphabet[newCharIndex];
+      //add newChar encrypted to the outputResult variable
+      outputResult += newChar;
     }
     console.log(outputResult);
   }
