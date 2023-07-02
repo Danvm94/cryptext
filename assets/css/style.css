@@ -82,6 +82,7 @@ body {
   justify-content: center;
   margin: 5px;
   width: 93%;
+  display: none;
 }
 /* Encrypt Box Div that contains the the input text, submit and result */
 .encrypt-box__final {
@@ -90,6 +91,7 @@ body {
   justify-content: center;
   margin: 5px;
   width: 93%;
+  display: none;
 }
 /* Encrypt Box Div that contains the result */
 .encrypt-box__result {

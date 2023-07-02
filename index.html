@@ -16,7 +16,7 @@
     <!-- CSS Style for webpage -->
     <link rel="stylesheet" href="./assets/css/style.css">
     <!-- font awesome script  -->
-    <script src="https://kit.fontawesome.com/c7dbda0798.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/0202f769a6.js" crossorigin="anonymous"></script>
     <!-- script.js script for encryption and decryption -->
     <script src="./assets/js/script.js"></script>
 
@@ -42,6 +42,11 @@
         <form class="encrypt-box__form" action="">
             <div class="encrypt-box__encryption-decryption">
                 <h3 class="encrypt-box__title-three">Encryption / Decryption</h3>
+                <p class="encrypt-box__info" id="info-one"> <i class="fa-solid fa-circle-info"></i> Here, you can
+                    choose whether you want to encrypt a new
+                    text (Encrypt)
+                    or decrypt an existing text
+                    (Decrypt).</p>
                 <label class="encrypt-box__radio-button">
                     <input class="encrypt-box__option" type="radio" id="encrypt" name="encryption" value="encrypt"
                         required>
@@ -52,22 +57,24 @@
                     Decrypt
                 </label>
             </div>
-            <div class="encrypt-box__encryption-type">
+            <div class="encrypt-box__encryption-type" id="encryption-type-div">
                 <h3 class="encrypt-box__title-three">Encryption Type</h3>
+                <p class="encrypt-box__info" id="info-two"> <i class="fa-solid fa-circle-info"></i> Please select the
+                    cryptography type: Caesar or Vigenere.</p>
                 <label class="encrypt-box__radio-button">
                     <input class="encrypt-box__option" type="radio" id="caesar" name="encryption-type" value="caesar"
                         required>
                     Caesar Cipher
                 </label>
                 <label class="encrypt-box__radio-button">
-                    <input class="encrypt-box__option" type="text" id="vigenere" name="encryption-type"
+                    <input class="encrypt-box__option" type="radio" id="vigenere" name="encryption-type"
                         value="vigenere">
                     Vigenère Cipher
                 </label>
                 <input type="number" name="key" id="key">
                 <label for="key">Key</label>
             </div>
-            <div class="encrypt-box__encryption-type">
+            <div class="encrypt-box__final" id="encryption-result-div">
                 <textarea class="encrypt-box__text" placeholder="Type your text here (500 char max)..." rows="4"
                     maxlength="500"></textarea>
                 <input class="encrypt-box__submit" type="submit" value="Submit">
