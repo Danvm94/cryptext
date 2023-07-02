@@ -26,10 +26,25 @@ document.addEventListener("DOMContentLoaded", function () {
         let encryptionResultDiv = document.getElementById(
           "encryption-result-div"
         );
+        let encryptionKeyDiv = document.getElementById("encryption-key-div");
         //Hide the infoTwo text
         infoTwo.style.display = "none";
         //Show the result div
         encryptionResultDiv.style.display = "flex";
+        encryptionKeyDiv.style.display = "flex";
+        if (this.id === "caesar") {
+          encryptionKeyDiv.innerHTML = `
+          <h3 class="encrypt-box__title-three">Shift Number</h3>
+          <input class="encrypt-box__key" type="number" name="key" id="key" min="1" max="26" required>
+          `;
+          let encryptionKey = document.getElementById("key");
+          encryptionKey.style.width = "40px";
+        } else if (this.id === "vigenere") {
+          encryptionKeyDiv.innerHTML = `
+            <h3 class="encrypt-box__title-three">Key</h3>
+            <textarea class="encrypt-box__text" rows="4" placeholder="Type the key here (500 char max)..." maxlength="500" id="key"></textarea>
+            `;
+        }
       }
     });
   }
@@ -44,7 +59,6 @@ document.addEventListener("DOMContentLoaded", function () {
     ).value;
     let textInput = document.getElementById("text-input").value;
     if (encryptionType === "caesar") {
-      console.log(encryption);
       caesarEncryption(encryption, textInput);
     }
   });

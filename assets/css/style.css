@@ -52,7 +52,7 @@ body {
 }
 /* Input Text area in Encrypt Box */
 .encrypt-box__text {
-  width: 90%;
+  width: 96%;
   height: 100px;
   resize: none;
   color: #000000;
@@ -77,16 +77,25 @@ body {
 }
 /* Encrypt Box Div that contains the radio options for encryption type */
 .encrypt-box__encryption-type {
-  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: 5px;
   width: 93%;
   display: none;
 }
+/* Encrypt Box Div that contains the input for key or shift */
+.encrypt-box__encryption-key {
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 5px;
+  width: 93%;
+  display: none;
+}
+.encrypt-box__key {
+  color: #000000;
+}
 /* Encrypt Box Div that contains the the input text, submit and result */
 .encrypt-box__final {
-  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: 5px;
@@ -95,10 +104,10 @@ body {
 }
 /* Encrypt Box Div that contains the result */
 .encrypt-box__result {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 5px;
+  width: 93%;
   display: none;
 }
 /* Encrypt Box div's title */
