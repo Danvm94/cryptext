@@ -53,35 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
 This function is designed for the Caesar Cipher method. It receives an input parameter called 'encryption' which should be set to either 'encrypt' or 'decrypt'. Based on the chosen option, the method will perform encryption or decryption on the text using the Caesar Cipher technique.
 */
 function caesarEncryption(encryption, textInput) {
-  //Alphabet list that contains all characters
-  const alphabet = [
-    "A",
-    "B",
-    "C",
-    "D",
-    "E",
-    "F",
-    "G",
-    "H",
-    "I",
-    "J",
-    "K",
-    "L",
-    "M",
-    "N",
-    "O",
-    "P",
-    "Q",
-    "R",
-    "S",
-    "T",
-    "U",
-    "V",
-    "W",
-    "X",
-    "Y",
-    "Z",
-  ];
   //outputResult variable will store the final encrypted text
   let outputResult = "";
   //Check if the method is encrypt or decrypt
@@ -90,14 +61,28 @@ function caesarEncryption(encryption, textInput) {
     for (let index = 0; index < textInput.length; index++) {
       //char variable to store each char from textInput string
       let char = textInput[index];
+      //charUnicode variable to store the unicode number of the char
+      let charUnicode = char.charCodeAt(0);
       //shift variable to store the number for Caesar Cipher
       let shift = 1;
-      //newCharIndex variable to store the index of the new encrypted char
-      let newCharIndex = (alphabet.indexOf(char.toUpperCase()) + shift) % 26;
-      //newChar variable to store the new encrypted char
-      let newChar = alphabet[newCharIndex];
-      //add newChar encrypted to the outputResult variable
-      outputResult += newChar;
+      //check if charUnicode correspond to a upper case letter char (65 - 90)
+      if (charUnicode >= 65 && charUnicode <= 90) {
+        //newChar variable to store the new encrypted char
+        let newChar = ((charUnicode - 65 + shift) % 26) + 65;
+        //add newChar encrypted to the outputResult variable
+        outputResult += String.fromCharCode(newChar);
+      }
+      //check if charUnicode correspond to a lower case letter char (97 - 122)
+      else if (charUnicode >= 97 && charUnicode <= 122) {
+        //newChar variable to store the new encrypted char
+        let newChar = ((charUnicode - 97 + shift) % 26) + 97;
+        //add newChar encrypted to the outputResult variable
+        outputResult += String.fromCharCode(newChar);
+      }
+      //case it is not a latin letter char
+      else {
+        outputResult += char;
+      }
     }
     console.log(outputResult);
   }
