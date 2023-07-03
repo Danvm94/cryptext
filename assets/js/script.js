@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } else if (this.id === "vigenere") {
           encryptionKeyDiv.innerHTML = `
             <h3 class="encrypt-box__title-three">Key</h3>
-            <textarea class="encrypt-box__text" rows="4" placeholder="Type the key here (500 char max)..." maxlength="500" id="key"></textarea>
+            <input class="encrypt-box__key" type="text" name="key" id="key" maxlength = "15" required>
             `;
         }
       }
@@ -60,6 +60,9 @@ document.addEventListener("DOMContentLoaded", function () {
     let textInput = document.getElementById("text-input").value;
     if (encryptionType === "caesar") {
       outputResult = caesarEncryption(encryption, textInput);
+      showResult(outputResult);
+    } else {
+      outputResult = vigenereEncryption(encryption, textInput);
       showResult(outputResult);
     }
   });
@@ -103,6 +106,40 @@ function caesarEncryption(encryption, textInput) {
     //case it is not a latin letter char
     else {
       outputResult += char;
+    }
+  }
+  return outputResult;
+}
+
+function vigenereEncryption(encryption, textInput) {
+  let outputResult = "";
+  let key = document.getElementById("key").value.toUpperCase();
+  let keyIndex = 0;
+
+  for (let i = 0; i < textInput.length; i++) {
+    let textInputChar = textInput[i];
+    let textInputCharUppercase;
+    textInputChar === textInputChar.toUpperCase()
+      ? (textInputCharUppercase = true)
+      : (textInputCharUppercase = false);
+    textInputChar = textInputChar.toUpperCase();
+    let textInputCharUnicode = textInputChar.charCodeAt(0);
+
+    let keyChar = key[keyIndex % key.length];
+    let keyCharUnicode = keyChar.charCodeAt(0);
+
+    if (textInputCharUnicode >= 65 && textInputCharUnicode <= 90) {
+      let newChar =
+        encryption === "encrypt"
+          ? ((textInputCharUnicode - 65 + (keyCharUnicode - 65)) % 26) + 65
+          : ((textInputCharUnicode - 65 - (keyCharUnicode - 65) + 26) % 26) +
+            65;
+      textInputCharUppercase
+        ? (outputResult += String.fromCharCode(newChar))
+        : (outputResult += String.fromCharCode(newChar).toLowerCase());
+      keyIndex++;
+    } else {
+      outputResult += String.fromCharCode(textInputCharUnicode);
     }
   }
   return outputResult;
