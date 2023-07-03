@@ -34,15 +34,16 @@
         <p class="brief-about__text">CrypText is a versatile website that empowers you to encrypt text messages using
             two different encryption methods: Caesar and Vigenere. Encrypting your text messages offers
             several advantages, for more information, please check our <a href="./about.html" class="brief-about__link"
-                target="_blank" rel="noopener" aria-label="Visit our about page (opens in a new tab)">about</a> session
+                target="_blank" rel="noopener" aria-label="Visit our about page (opens in a new tab)">about</a> session.
         </p>
     </div>
     <!-- Section for the Encrypt Text -->
     <div class="encrypt-box">
         <form class="encrypt-box__form" id="encryption-form" action="">
-            <div class="encrypt-box__encryption-decryption">
+            <div class="encrypt-box__encryption-decryption" id="encryptionDecryptionContainer">
                 <h3 class="encrypt-box__title-three">Encryption / Decryption</h3>
-                <p class="encrypt-box__info" id="info-one"> <i class="fa-solid fa-circle-info"></i> Here, you can
+                <p class="encrypt-box__info-text" id="info-one"> <i class="fa-solid fa-circle-info"></i> Here,
+                    you can
                     choose whether you want to encrypt a new
                     text (Encrypt)
                     or decrypt an existing text
@@ -57,9 +58,10 @@
                     Decrypt
                 </label>
             </div>
-            <div class="encrypt-box__encryption-type" id="encryption-type-div">
+            <div class="encrypt-box__encryption-type" id="encryptionTypeContainer">
                 <h3 class="encrypt-box__title-three">Encryption Type</h3>
-                <p class="encrypt-box__info" id="info-two"> <i class="fa-solid fa-circle-info"></i> Please select the
+                <p class="encrypt-box__info-text" id="info-two"> <i class="fa-solid fa-circle-info"></i> Please select
+                    the
                     cryptography type: Caesar or Vigenere.</p>
                 <label class="encrypt-box__radio-button">
                     <input class="encrypt-box__option" type="radio" id="caesar" name="encryption-type" value="caesar"
@@ -72,18 +74,20 @@
                     Vigenère Cipher
                 </label>
             </div>
-            <div class="encrypt-box__encryption-key" id="encryption-key-div">
+            <div class="encrypt-box__encryption-key" id="encryptionKeyContainer">
 
             </div>
-            <div class="encrypt-box__final" id="encryption-result-div">
+            <div class="encrypt-box__final" id="encryptionInputContainer">
                 <h3 class="encrypt-box__title-three">Text Input</h3>
                 <textarea class="encrypt-box__text" id="text-input" placeholder="Type your text here (500 char max)..."
                     rows="4" maxlength="500"></textarea>
-                <input class="encrypt-box__submit" id="submit-button" type="submit" value="Submit">
+
             </div>
+
+            <div class="encrypt-box__result" id="result-div">
+            </div>
+            <input class="encrypt-box__submit" id="submitButton" type="submit" value="Submit">
         </form>
-        <div class="encrypt-box__result" id="result-div">
-        </div>
     </div>
 </body>
 

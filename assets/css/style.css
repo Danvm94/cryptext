@@ -36,6 +36,9 @@ body {
 }
 /* Bried About Text styles */
 .brief-about__text {
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
   margin: 10px;
 }
 /* Encrypt Box styles */
@@ -74,6 +77,8 @@ body {
   justify-content: center;
   margin: 5px;
   width: 93%;
+  opacity: 0;
+  transition: opacity 2s;
 }
 /* Encrypt Box Div that contains the radio options for encryption type */
 .encrypt-box__encryption-type {
@@ -82,6 +87,8 @@ body {
   margin: 5px;
   width: 93%;
   display: none;
+  opacity: 0;
+  transition: opacity 2s;
 }
 /* Encrypt Box Div that contains the input for key or shift */
 .encrypt-box__encryption-key {
@@ -93,6 +100,7 @@ body {
 }
 .encrypt-box__key {
   color: #000000;
+  margin-top: 10px;
 }
 /* Encrypt Box Div that contains the the input text, submit and result */
 .encrypt-box__final {
@@ -128,6 +136,10 @@ body {
   font-weight: 600;
   margin: 5px;
   width: 90%;
+  display: none;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 2s;
 }
 /* Encrypt Box radio buttons */
 .encrypt-box__radio-button {
@@ -145,6 +157,14 @@ body {
   cursor: pointer;
   width: 42%;
   text-align: center;
+}
+/* Encrypt Box info text style */
+.encrypt-box__info-text {
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  margin: 0px;
+  transition: opacity 2s;
 }
 /* Encrypt Box radio button change when selected */
 /* When encrypt-box__option is checked, it will look after encrypt-box__radio-button to change it's properties*/

@@ -1,55 +1,72 @@
 // Wait for the DOM to finish loading before running the game
 document.addEventListener("DOMContentLoaded", function () {
+  // Save the page's form in a variable called form
   var form = document.getElementById("encryption-form");
+  // Change the default behavior of the page's form
   form.addEventListener("submit", function (event) {
+    // Prevent the form to be submited
     event.preventDefault();
-    // Additional logic or actions to handle the form submission
   });
-  //Collect all the buttons from the page
+
+  // Save the encryptionDecryptionContainer <div> to the variable encryptionDecryptionContainer
+  let encryptionDecryptionContainer = document.getElementById(
+    "encryptionDecryptionContainer"
+  );
+  // Change the first part Encryption / Decryption to visible
+  opacityChange("show", encryptionDecryptionContainer);
+
+  // Collect all the buttons from the page
   let buttons = document.getElementsByClassName("encrypt-box__option");
   for (let button of buttons) {
-    //Add event listener type click for each option in buttons
+    // Add event listener type click for each option in buttons
     button.addEventListener("click", function () {
-      //If click on encrypt or decrypt
+      // If click on encrypt or decrypt
       if (this.id === "encrypt" || this.id === "decrypt") {
-        let infoOne = document.getElementById("info-one");
-        let encryptionTypeDiv = document.getElementById("encryption-type-div");
-        //Hide the infoOne text
-        infoOne.style.display = "none";
-        //Show the encryption type div
-        encryptionTypeDiv.style.display = "flex";
-        console.log("Encrypt");
+        // Display the second div called encryptionTypeContainer
+        opacityChange(
+          "show",
+          document.getElementById("encryptionTypeContainer")
+        );
+        // Hide the first info text
+        opacityChange("hide", document.getElementById("info-one"));
       }
       //If click on caesar or vigenere
       else if (this.id === "caesar" || this.id === "vigenere") {
-        let infoTwo = document.getElementById("info-two");
-        let encryptionResultDiv = document.getElementById(
-          "encryption-result-div"
+        // Display the third div called encryptionKeyContainer
+        opacityChange(
+          "show",
+          document.getElementById("encryptionKeyContainer")
         );
-        let encryptionKeyDiv = document.getElementById("encryption-key-div");
-        //Hide the infoTwo text
-        infoTwo.style.display = "none";
-        //Show the result div
-        encryptionResultDiv.style.display = "flex";
-        encryptionKeyDiv.style.display = "flex";
+        // Hide the second info text
+        opacityChange("hide", document.getElementById("info-two"));
+        // Check the option and add the correct text for the selected option
         if (this.id === "caesar") {
-          encryptionKeyDiv.innerHTML = `
+          document.getElementById("encryptionKeyContainer").innerHTML = `
           <h3 class="encrypt-box__title-three">Shift Number</h3>
+          <p class="encrypt-box__info-text" id="info-three"><i class="fa-solid fa-circle-info"></i> In the Caesar cipher, a number shift is required to specify the amount by which each character in the text should be shifted. This shift value determines the transformation of the text, shifting each character a specified number of times.</p>
           <input class="encrypt-box__key" type="number" name="key" id="key" min="1" max="26" required>
           `;
           let encryptionKey = document.getElementById("key");
           encryptionKey.style.width = "40px";
         } else if (this.id === "vigenere") {
-          encryptionKeyDiv.innerHTML = `
+          document.getElementById("encryptionKeyContainer").innerHTML = `
             <h3 class="encrypt-box__title-three">Key</h3>
+            <p class="encrypt-box__info-text" id="info-three"><i class="fa-solid fa-circle-info"></i> In the Vigenere cipher, a keyword needs to be provided to determine the shifting for each character in the text. The keyword is used cyclically to perform the shifting operation on the text.</p>
             <input class="encrypt-box__key" type="text" name="key" id="key" maxlength = "15" required>
             `;
         }
+        // Display the encryptionInputContainer div
+        opacityChange(
+          "show",
+          document.getElementById("encryptionInputContainer")
+        );
+        // Display the submit button
+        opacityChange("show", document.getElementById("submitButton"));
       }
     });
   }
   //Since submit button is not radio, there is a different class name for it, so ID is used instead
-  let submitButton = document.getElementById("submit-button");
+  let submitButton = document.getElementById("submitButton");
   submitButton.addEventListener("click", function () {
     let encryption = document.querySelector(
       'input[name="encryption"]:checked'
@@ -60,6 +77,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let textInput = document.getElementById("text-input").value;
     if (encryptionType === "caesar") {
       outputResult = caesarEncryption(encryption, textInput);
+      // Hide the info-three
+      opacityChange("hide", document.getElementById("info-three"));
       showResult(outputResult);
     } else {
       outputResult = vigenereEncryption(encryption, textInput);
@@ -118,10 +137,7 @@ function vigenereEncryption(encryption, textInput) {
 
   for (let i = 0; i < textInput.length; i++) {
     let textInputChar = textInput[i];
-    let textInputCharUppercase;
-    textInputChar === textInputChar.toUpperCase()
-      ? (textInputCharUppercase = true)
-      : (textInputCharUppercase = false);
+    let textInputCharUppercase = textInputChar === textInputChar.toUpperCase();
     textInputChar = textInputChar.toUpperCase();
     let textInputCharUnicode = textInputChar.charCodeAt(0);
 
@@ -152,4 +168,18 @@ function showResult(outputResult) {
     <textarea class="encrypt-box__text" rows="4" readonly>${outputResult}</textarea>
   `;
   resultDiv.style.display = "flex";
+}
+
+function opacityChange(type, element) {
+  if (type === "hide") {
+    element.style.opacity = "0";
+    setTimeout(() => {
+      element.style.display = "none";
+    }, 2000);
+  } else {
+    element.style.display = "flex";
+    setTimeout(() => {
+      element.style.opacity = "1";
+    }, 50);
+  }
 }
