@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
           document.getElementById("encryptionKeyContainer").innerHTML = `
           <h3 class="encrypt-box__title-three">Shift Number</h3>
           <p class="encrypt-box__info-text" id="info-three"><i class="fa-solid fa-circle-info"></i> In the Caesar cipher, a number shift is required to specify the amount by which each character in the text should be shifted. This shift value determines the transformation of the text, shifting each character a specified number of times.</p>
-          <input class="encrypt-box__key" type="number" name="key" id="key" min="1" max="26" required>
+          <input class="encrypt-box__key" type="number" name="key" id="key" min="1" max="26" placeholder="1" value="1" required>
           `;
           let encryptionKey = document.getElementById("key");
           encryptionKey.style.width = "40px";
@@ -82,6 +82,8 @@ document.addEventListener("DOMContentLoaded", function () {
       showResult(outputResult);
     } else {
       outputResult = vigenereEncryption(encryption, textInput);
+      // Hide the info-three
+      opacityChange("hide", document.getElementById("info-three"));
       showResult(outputResult);
     }
   });
@@ -90,46 +92,34 @@ document.addEventListener("DOMContentLoaded", function () {
 This function is designed for the Caesar Cipher method. It receives an input parameter called 'encryption' which should be set to either 'encrypt' or 'decrypt'. Based on the chosen option, the method will perform encryption or decryption on the text using the Caesar Cipher technique.
 */
 function caesarEncryption(encryption, textInput) {
-  //outputResult variable will store the final encrypted text
   let outputResult = "";
-  //For each char in textInput string
+  let shift = parseInt(document.getElementById("key").value);
   for (let index = 0; index < textInput.length; index++) {
-    //char variable to store each char from textInput string
     let char = textInput[index];
-    //charUnicode variable to store the unicode number of the char
+    let charUppercase = char === char.toUpperCase();
+    char = char.toUpperCase();
     let charUnicode = char.charCodeAt(0);
-    //shift variable to store the number for Caesar Cipher
-    let shift = document.getElementById("key").value;
-    //parse int shift
-    shift = parseInt(shift);
-    //check if charUnicode correspond to a upper case letter char (65 - 90)
+
     if (charUnicode >= 65 && charUnicode <= 90) {
-      //newChar variable to store the new encrypted char
       let newChar =
         encryption === "encrypt"
           ? ((charUnicode - 65 + shift) % 26) + 65
           : ((charUnicode - 65 - shift + 26) % 26) + 65;
-      //add newChar encrypted to the outputResult variable
+      charUppercase
+        ? (outputResult += String.fromCharCode(newChar))
+        : (outputResult += String.fromCharCode(newChar).toLowerCase());
       outputResult += String.fromCharCode(newChar);
-    }
-    //check if charUnicode correspond to a lower case letter char (97 - 122)
-    else if (charUnicode >= 97 && charUnicode <= 122) {
-      //newChar variable to store the new encrypted char
-      let newChar =
-        encryption === "encrypt"
-          ? ((charUnicode - 97 + shift) % 26) + 97
-          : ((charUnicode - 97 - shift + 26) % 26) + 97;
-      //add newChar encrypted to the outputResult variable
-      outputResult += String.fromCharCode(newChar);
-    }
-    //case it is not a latin letter char
-    else {
+    } else {
       outputResult += char;
     }
   }
   return outputResult;
 }
 
+/*
+The vigenereEncryption function implements the Vigenere cipher encryption or decryption algorithm. 
+It takes two parameters: encryption (indicating the operation to perform, either "encrypt" or "decrypt") and textInput (the text to be encrypted or decrypted).
+*/
 function vigenereEncryption(encryption, textInput) {
   let outputResult = "";
   let key = document.getElementById("key").value.toUpperCase();
@@ -160,6 +150,7 @@ function vigenereEncryption(encryption, textInput) {
   }
   return outputResult;
 }
+
 
 function showResult(outputResult) {
   let resultDiv = document.getElementById("result-div");

@@ -97,6 +97,8 @@ body {
   margin: 5px;
   width: 93%;
   display: none;
+  opacity: 0;
+  transition: opacity 2s;
 }
 .encrypt-box__key {
   color: #000000;
@@ -109,6 +111,8 @@ body {
   margin: 5px;
   width: 93%;
   display: none;
+  opacity: 0;
+  transition: opacity 2s;
 }
 /* Encrypt Box Div that contains the result */
 .encrypt-box__result {
