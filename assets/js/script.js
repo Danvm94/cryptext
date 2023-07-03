@@ -88,9 +88,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-/*
-This function is designed for the Caesar Cipher method. It receives an input parameter called 'encryption' which should be set to either 'encrypt' or 'decrypt'. Based on the chosen option, the method will perform encryption or decryption on the text using the Caesar Cipher technique.
-*/
+/**
+ * This function is designed for the Caesar Cipher method.
+ * It receives an input parameter called 'encryption' which should be set to either 'encrypt' or 'decrypt'.
+ * Based on the chosen option, the method will perform encryption or decryption on the text using the Caesar Cipher technique.
+ */
 function caesarEncryption(encryption, textInput) {
   let outputResult = "";
   let shift = parseInt(document.getElementById("key").value);
@@ -116,10 +118,12 @@ function caesarEncryption(encryption, textInput) {
   return outputResult;
 }
 
-/*
-The vigenereEncryption function implements the Vigenere cipher encryption or decryption algorithm. 
-It takes two parameters: encryption (indicating the operation to perform, either "encrypt" or "decrypt") and textInput (the text to be encrypted or decrypted).
-*/
+/**
+ * The vigenereEncryption function implements the Vigenere cipher encryption or decryption algorithm.
+ * It takes two parameters:
+ * encryption (indicating the operation to perform, either "encrypt" or "decrypt")
+ * and textInput (the text to be encrypted or decrypted).
+ */
 function vigenereEncryption(encryption, textInput) {
   let outputResult = "";
   let key = document.getElementById("key").value.toUpperCase();
@@ -151,7 +155,9 @@ function vigenereEncryption(encryption, textInput) {
   return outputResult;
 }
 
-
+/**
+ * This function sets the innerHTML of the div with the ID 'result-div' to display the encrypted text (result).
+ */
 function showResult(outputResult) {
   let resultDiv = document.getElementById("result-div");
   resultDiv.innerHTML = `
@@ -160,7 +166,11 @@ function showResult(outputResult) {
   `;
   resultDiv.style.display = "flex";
 }
-
+/**
+ * This function modifies the opacity and display properties of an HTML element. It takes two inputs: type ("hide" or "show") and the element (HTML element).
+ * If the type is "hide", it immediately sets the opacity to "0" and after 2000ms, sets the display to "none".
+ * If the type is "show", it immediately sets the display to "flex" and after 50ms (to ensure proper application of the CSS property "transition: opacity 2s;"), sets the opacity to "1".
+ */
 function opacityChange(type, element) {
   if (type === "hide") {
     element.style.opacity = "0";
