@@ -59,7 +59,8 @@ document.addEventListener("DOMContentLoaded", function () {
     ).value;
     let textInput = document.getElementById("text-input").value;
     if (encryptionType === "caesar") {
-      caesarEncryption(encryption, textInput);
+      outputResult = caesarEncryption(encryption, textInput);
+      showResult(outputResult);
     }
   });
 });
@@ -76,7 +77,9 @@ function caesarEncryption(encryption, textInput) {
     //charUnicode variable to store the unicode number of the char
     let charUnicode = char.charCodeAt(0);
     //shift variable to store the number for Caesar Cipher
-    let shift = 1;
+    let shift = document.getElementById("key").value;
+    //parse int shift
+    shift = parseInt(shift);
     //check if charUnicode correspond to a upper case letter char (65 - 90)
     if (charUnicode >= 65 && charUnicode <= 90) {
       //newChar variable to store the new encrypted char
@@ -102,5 +105,14 @@ function caesarEncryption(encryption, textInput) {
       outputResult += char;
     }
   }
-  console.log(outputResult);
+  return outputResult;
+}
+
+function showResult(outputResult) {
+  let resultDiv = document.getElementById("result-div");
+  resultDiv.innerHTML = `
+    <h3>Result</h3>
+    <textarea class="encrypt-box__text" rows="4" readonly>${outputResult}</textarea>
+  `;
+  resultDiv.style.display = "flex";
 }
