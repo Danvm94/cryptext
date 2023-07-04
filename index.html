@@ -86,7 +86,12 @@
 
             <div class="encrypt-box__result" id="result-div">
             </div>
-            <input class="encrypt-box__submit" id="submitButton" type="submit" value="Submit">
+            <div class="encrypt-box__buttonsContainer" id="buttonsContainer">
+                <button class="encrypt-box__submit" id="submitButton" type="button"
+                    onclick="generateAnswer()">Submit</button>
+                <button class="encrypt-box__clear" id="clearButton" type="button"
+                    onclick="alert('Hello world!')">Clear</button>
+            </div>
         </form>
     </div>
 </body>

@@ -139,9 +139,30 @@ body {
   min-width: 100px;
   font-weight: 600;
   margin: 5px;
-  width: 90%;
-  display: none;
+  width: 45%;
   justify-content: center;
+}
+
+.encrypt-box__clear {
+  background-color: #92939d;
+  border: 2px solid #938d96;
+  color: #000000;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  min-width: 100px;
+  font-weight: 600;
+  margin: 5px;
+  width: 45%;
+  justify-content: center;
+}
+
+.encrypt-box__buttonsContainer {
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 5px;
+  width: 93%;
+  display: none;
   opacity: 0;
   transition: opacity 2s;
 }

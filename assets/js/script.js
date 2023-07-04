@@ -61,32 +61,10 @@ document.addEventListener("DOMContentLoaded", function () {
           document.getElementById("encryptionInputContainer")
         );
         // Display the submit button
-        opacityChange("show", document.getElementById("submitButton"));
+        opacityChange("show", document.getElementById("buttonsContainer"));
       }
     });
   }
-  //Since submit button is not radio, there is a different class name for it, so ID is used instead
-  let submitButton = document.getElementById("submitButton");
-  submitButton.addEventListener("click", function () {
-    let encryption = document.querySelector(
-      'input[name="encryption"]:checked'
-    ).value;
-    let encryptionType = document.querySelector(
-      'input[name="encryption-type"]:checked'
-    ).value;
-    let textInput = document.getElementById("text-input").value;
-    if (encryptionType === "caesar") {
-      outputResult = caesarEncryption(encryption, textInput);
-      // Hide the info-three
-      opacityChange("hide", document.getElementById("info-three"));
-      showResult(outputResult);
-    } else {
-      outputResult = vigenereEncryption(encryption, textInput);
-      // Hide the info-three
-      opacityChange("hide", document.getElementById("info-three"));
-      showResult(outputResult);
-    }
-  });
 });
 /**
  * This function is designed for the Caesar Cipher method.
@@ -182,5 +160,26 @@ function opacityChange(type, element) {
     setTimeout(() => {
       element.style.opacity = "1";
     }, 50);
+  }
+}
+
+function generateAnswer() {
+  let encryption = document.querySelector(
+    'input[name="encryption"]:checked'
+  ).value;
+  let encryptionType = document.querySelector(
+    'input[name="encryption-type"]:checked'
+  ).value;
+  let textInput = document.getElementById("text-input").value;
+  if (encryptionType === "caesar") {
+    outputResult = caesarEncryption(encryption, textInput);
+    // Hide the info-three
+    opacityChange("hide", document.getElementById("info-three"));
+    showResult(outputResult);
+  } else {
+    outputResult = vigenereEncryption(encryption, textInput);
+    // Hide the info-three
+    opacityChange("hide", document.getElementById("info-three"));
+    showResult(outputResult);
   }
 }
