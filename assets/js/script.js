@@ -1,6 +1,6 @@
 // Wait for the DOM to finish loading before running the game
 document.addEventListener("DOMContentLoaded", function () {
-  // Change the first part Encryption / Decryption to visible
+  // Change the first part Encryption / Decryption to visible:
   opacityChange(
     "show",
     document.getElementById("encryptionDecryptionContainer")
@@ -123,7 +123,7 @@ function opacityChange(type, element) {
     element.style.opacity = "0";
     setTimeout(() => {
       element.style.display = "none";
-    }, 2000);
+    }, 1800);
   } else {
     element.style.display = "flex";
     setTimeout(() => {
