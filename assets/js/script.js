@@ -1,22 +1,10 @@
 // Wait for the DOM to finish loading before running the game
 document.addEventListener("DOMContentLoaded", function () {
-  // Save the page's form in a variable called form
-  var form = document.getElementById("encryption-form");
-  // Change the default behavior of the page's form
-  form.addEventListener("submit", function (event) {
-    // Prevent the form to be submited
-    event.preventDefault();
-  });
-
-  // Save the encryptionDecryptionContainer <div> to the variable encryptionDecryptionContainer
-  let encryptionDecryptionContainer = document.getElementById(
-    "encryptionDecryptionContainer"
-  );
   // Change the first part Encryption / Decryption to visible
-  opacityChange("show", encryptionDecryptionContainer);
-
-  // Collect all the buttons from the page
-  let buttons = document.getElementsByClassName("encrypt-box__option");
+  opacityChange(
+    "show",
+    document.getElementById("encryptionDecryptionContainer")
+  );
 });
 /**
  * Implements the Caesar Cipher encryption or decryption algorithm.
