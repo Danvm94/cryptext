@@ -30,39 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
         // Hide the first info text
         opacityChange("hide", document.getElementById("info-one"));
       }
-      //If click on caesar or vigenere
-      else if (this.id === "caesar" || this.id === "vigenere") {
-        // Display the third div called encryptionKeyContainer
-        opacityChange(
-          "show",
-          document.getElementById("encryptionKeyContainer")
-        );
-        // Hide the second info text
-        opacityChange("hide", document.getElementById("info-two"));
-        // Check the option and add the correct text for the selected option
-        if (this.id === "caesar") {
-          document.getElementById("encryptionKeyContainer").innerHTML = `
-          <h3 class="encrypt-box__title-three">Shift Number</h3>
-          <p class="encrypt-box__info-text" id="info-three"><i class="fa-solid fa-circle-info"></i> In the Caesar cipher, a number shift is required to specify the amount by which each character in the text should be shifted. This shift value determines the transformation of the text, shifting each character a specified number of times.</p>
-          <input class="encrypt-box__key" type="number" name="key" id="key" min="1" max="26" placeholder="1" value="1" required>
-          `;
-          let encryptionKey = document.getElementById("key");
-          encryptionKey.style.width = "40px";
-        } else if (this.id === "vigenere") {
-          document.getElementById("encryptionKeyContainer").innerHTML = `
-            <h3 class="encrypt-box__title-three">Key</h3>
-            <p class="encrypt-box__info-text" id="info-three"><i class="fa-solid fa-circle-info"></i> In the Vigenere cipher, a keyword needs to be provided to determine the shifting for each character in the text. The keyword is used cyclically to perform the shifting operation on the text.</p>
-            <input class="encrypt-box__key" type="text" name="key" id="key" maxlength = "15" required>
-            `;
-        }
-        // Display the encryptionInputContainer div
-        opacityChange(
-          "show",
-          document.getElementById("encryptionInputContainer")
-        );
-        // Display the submit button
-        opacityChange("show", document.getElementById("buttonsContainer"));
-      }
     });
   }
 });
@@ -88,14 +55,12 @@ function caesarEncryption(encryption, textInput) {
       charUppercase
         ? (outputResult += String.fromCharCode(newChar))
         : (outputResult += String.fromCharCode(newChar).toLowerCase());
-      outputResult += String.fromCharCode(newChar);
     } else {
       outputResult += char;
     }
   }
   return outputResult;
 }
-
 /**
  * The vigenereEncryption function implements the Vigenere cipher encryption or decryption algorithm.
  * It takes two parameters:
@@ -132,7 +97,30 @@ function vigenereEncryption(encryption, textInput) {
   }
   return outputResult;
 }
-
+/**
+ * This function identifies the selected encryption and encryption options in the HTML document and calls the corresponding encryption function.
+ * It also triggers the `showResult` function with the returned value from the encryption function (Caesar or Vigenere).
+ */
+function generateResult() {
+  let encryption = document.querySelector(
+    'input[name="encryption"]:checked'
+  ).value;
+  let encryptionType = document.querySelector(
+    'input[name="encryption-type"]:checked'
+  ).value;
+  let textInput = document.getElementById("text-input").value;
+  if (encryptionType === "caesar") {
+    outputResult = caesarEncryption(encryption, textInput);
+    // Hide the info-three
+    opacityChange("hide", document.getElementById("info-three"));
+    showResult(outputResult);
+  } else {
+    outputResult = vigenereEncryption(encryption, textInput);
+    // Hide the info-three
+    opacityChange("hide", document.getElementById("info-three"));
+    showResult(outputResult);
+  }
+}
 /**
  * This function sets the innerHTML of the div with the ID 'result-div' to display the encrypted text (result).
  */
@@ -163,23 +151,27 @@ function opacityChange(type, element) {
   }
 }
 
-function generateAnswer() {
-  let encryption = document.querySelector(
-    'input[name="encryption"]:checked'
-  ).value;
-  let encryptionType = document.querySelector(
-    'input[name="encryption-type"]:checked'
-  ).value;
-  let textInput = document.getElementById("text-input").value;
-  if (encryptionType === "caesar") {
-    outputResult = caesarEncryption(encryption, textInput);
-    // Hide the info-three
-    opacityChange("hide", document.getElementById("info-three"));
-    showResult(outputResult);
-  } else {
-    outputResult = vigenereEncryption(encryption, textInput);
-    // Hide the info-three
-    opacityChange("hide", document.getElementById("info-three"));
-    showResult(outputResult);
+/**
+ * This function updates the HTML content of the div with the id "encryptionKeyContainer" to display the appropriate text and attributes based on the input "encryption".
+ */
+function updateEncryptionKeyContainer(encryption) {
+  opacityChange("show", document.getElementById("encryptionKeyContainer"));
+  opacityChange("hide", document.getElementById("info-two"));
+  if (encryption === "caesar") {
+    document.getElementById("encryptionKeyContainer").innerHTML = `
+    <h3 class="encrypt-box__title-three">Shift Number</h3>
+    <p class="encrypt-box__info-text" id="info-three"><i class="fa-solid fa-circle-info"></i> In the Caesar cipher, a number shift is required to specify the amount by which each character in the text should be shifted. This shift value determines the transformation of the text, shifting each character a specified number of times.</p>
+    <input class="encrypt-box__key" type="number" name="key" id="key" min="1" max="26" placeholder="1" value="1" required>
+    `;
+    let encryptionKey = document.getElementById("key");
+    encryptionKey.style.width = "40px";
+  } else if (encryption === "vigenere") {
+    document.getElementById("encryptionKeyContainer").innerHTML = `
+      <h3 class="encrypt-box__title-three">Key</h3>
+      <p class="encrypt-box__info-text" id="info-three"><i class="fa-solid fa-circle-info"></i> In the Vigenere cipher, a keyword needs to be provided to determine the shifting for each character in the text. The keyword is used cyclically to perform the shifting operation on the text.</p>
+      <input class="encrypt-box__key" type="text" name="key" id="key" maxlength = "15" required>
+      `;
   }
+  opacityChange("show", document.getElementById("encryptionInputContainer"));
+  opacityChange("show", document.getElementById("buttonsContainer"));
 }

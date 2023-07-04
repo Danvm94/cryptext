@@ -65,12 +65,12 @@
                     cryptography type: Caesar or Vigenere.</p>
                 <label class="encrypt-box__radio-button">
                     <input class="encrypt-box__option" type="radio" id="caesar" name="encryption-type" value="caesar"
-                        required>
+                        onclick="updateEncryptionKeyContainer('caesar')" required>
                     Caesar Cipher
                 </label>
                 <label class="encrypt-box__radio-button">
                     <input class="encrypt-box__option" type="radio" id="vigenere" name="encryption-type"
-                        value="vigenere">
+                        value="vigenere" onclick="updateEncryptionKeyContainer('vigenere')">
                     Vigenère Cipher
                 </label>
             </div>
@@ -88,7 +88,7 @@
             </div>
             <div class="encrypt-box__buttonsContainer" id="buttonsContainer">
                 <button class="encrypt-box__submit" id="submitButton" type="button"
-                    onclick="generateAnswer()">Submit</button>
+                    onclick="generateResult()">Submit</button>
                 <button class="encrypt-box__clear" id="clearButton" type="button"
                     onclick="alert('Hello world!')">Clear</button>
             </div>
