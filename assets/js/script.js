@@ -101,9 +101,17 @@ function showResult(outputResult) {
   let resultDiv = document.getElementById("result-div");
   resultDiv.innerHTML = `
     <h3>Result</h3>
-    <textarea class="encrypt-box__text" rows="4" readonly>${outputResult}</textarea>
+    <textarea class="encrypt-box__text" rows="4" id="text-output" readonly>${outputResult}</textarea>
   `;
-  resultDiv.style.display = "flex";
+  opacityChange("show", resultDiv);
+}
+/**
+ * Clear the HTML value for element ID "text-input" and "text-output"
+ */
+function clearText() {
+  document.getElementById("text-input").value = "";
+  document.getElementById("text-output").innerHTML = "";
+  opacityChange("hide", document.getElementById("result-div"));
 }
 /**
  * Modifies the opacity and display properties of an HTML element. It takes two inputs: type ("hide" or "show") and the element (HTML element).

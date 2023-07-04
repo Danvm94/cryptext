@@ -121,6 +121,8 @@ body {
   margin: 5px;
   width: 93%;
   display: none;
+  opacity: 0;
+  transition: opacity 2s;
 }
 /* Encrypt Box div's title */
 .encrypt-box__title-three {
