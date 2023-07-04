@@ -50,11 +50,12 @@
                     (Decrypt).</p>
                 <label class="encrypt-box__radio-button">
                     <input class="encrypt-box__option" type="radio" id="encrypt" name="encryption" value="encrypt"
-                        required>
+                        onclick="updateEncryptionTypeContainer()" required>
                     Encrypt
                 </label>
                 <label class="encrypt-box__radio-button">
-                    <input class="encrypt-box__option" type="radio" id="decrypt" name="encryption" value="decrypt">
+                    <input class="encrypt-box__option" type="radio" id="decrypt" name="encryption" value="decrypt"
+                        onclick="updateEncryptionTypeContainer()">
                     Decrypt
                 </label>
             </div>

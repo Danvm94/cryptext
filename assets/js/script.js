@@ -17,24 +17,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Collect all the buttons from the page
   let buttons = document.getElementsByClassName("encrypt-box__option");
-  for (let button of buttons) {
-    // Add event listener type click for each option in buttons
-    button.addEventListener("click", function () {
-      // If click on encrypt or decrypt
-      if (this.id === "encrypt" || this.id === "decrypt") {
-        // Display the second div called encryptionTypeContainer
-        opacityChange(
-          "show",
-          document.getElementById("encryptionTypeContainer")
-        );
-        // Hide the first info text
-        opacityChange("hide", document.getElementById("info-one"));
-      }
-    });
-  }
 });
 /**
- * This function is designed for the Caesar Cipher method.
+ * Implements the Caesar Cipher encryption or decryption algorithm.
  * It receives an input parameter called 'encryption' which should be set to either 'encrypt' or 'decrypt'.
  * Based on the chosen option, the method will perform encryption or decryption on the text using the Caesar Cipher technique.
  */
@@ -62,7 +47,7 @@ function caesarEncryption(encryption, textInput) {
   return outputResult;
 }
 /**
- * The vigenereEncryption function implements the Vigenere cipher encryption or decryption algorithm.
+ * Implements the Vigenere cipher encryption or decryption algorithm.
  * It takes two parameters:
  * encryption (indicating the operation to perform, either "encrypt" or "decrypt")
  * and textInput (the text to be encrypted or decrypted).
@@ -98,7 +83,7 @@ function vigenereEncryption(encryption, textInput) {
   return outputResult;
 }
 /**
- * This function identifies the selected encryption and encryption options in the HTML document and calls the corresponding encryption function.
+ * Identifies the selected encryption and encryption options in the HTML document and calls the corresponding encryption function.
  * It also triggers the `showResult` function with the returned value from the encryption function (Caesar or Vigenere).
  */
 function generateResult() {
@@ -122,7 +107,7 @@ function generateResult() {
   }
 }
 /**
- * This function sets the innerHTML of the div with the ID 'result-div' to display the encrypted text (result).
+ * Sets the innerHTML of the div with the ID 'result-div' to display the encrypted text (result).
  */
 function showResult(outputResult) {
   let resultDiv = document.getElementById("result-div");
@@ -133,7 +118,7 @@ function showResult(outputResult) {
   resultDiv.style.display = "flex";
 }
 /**
- * This function modifies the opacity and display properties of an HTML element. It takes two inputs: type ("hide" or "show") and the element (HTML element).
+ * Modifies the opacity and display properties of an HTML element. It takes two inputs: type ("hide" or "show") and the element (HTML element).
  * If the type is "hide", it immediately sets the opacity to "0" and after 2000ms, sets the display to "none".
  * If the type is "show", it immediately sets the display to "flex" and after 50ms (to ensure proper application of the CSS property "transition: opacity 2s;"), sets the opacity to "1".
  */
@@ -150,9 +135,8 @@ function opacityChange(type, element) {
     }, 50);
   }
 }
-
 /**
- * This function updates the HTML content of the div with the id "encryptionKeyContainer" to display the appropriate text and attributes based on the input "encryption".
+ * Updates the HTML content of the div with the id "encryptionKeyContainer" to display the appropriate text and attributes based on the input "encryption" (caesar or vigenere).
  */
 function updateEncryptionKeyContainer(encryption) {
   opacityChange("show", document.getElementById("encryptionKeyContainer"));
@@ -174,4 +158,11 @@ function updateEncryptionKeyContainer(encryption) {
   }
   opacityChange("show", document.getElementById("encryptionInputContainer"));
   opacityChange("show", document.getElementById("buttonsContainer"));
+}
+/**
+ * Updates the HTML content of the div with the id "encryptionTypeContainer" with opacityChange.
+ */
+function updateEncryptionTypeContainer() {
+  opacityChange("show", document.getElementById("encryptionTypeContainer"));
+  opacityChange("hide", document.getElementById("info-one"));
 }
