@@ -44,3 +44,9 @@ Cryptext is a versatile website that enables you to encrypt text messages using 
     - The main font used for the website is "Roboto" from Google Fonts. It is a clean and modern sans-serif typeface that enhances the overall readability and visual appeal of the content.
   - #### Imagery
     - Imagery plays a vital role in capturing users' attention and creating an engaging visual experience on the Cryptext website. Both website pages feature a prominent top icon that includes an image of a lock and the text "CrypText". This visual element serves as the identity of the website and project, representing the focus on encryption and security. It provides a recognizable and cohesive branding throughout the website, reinforcing the purpose and theme of the project.
+
+### Wireframes
+
+- Balsamiq Wireframe software was utilized to design the initial wireframe for the website, outlining the conceptual layout and structure. While some modifications were made during the development process, the wireframe served as a foundation for the final website design. Here is an image showcasing the wireframe for the index.html page:
+
+The wireframe visually represents the placement of various elements, such as navigation, content sections, and other components, providing a clear blueprint for the website's overall structure and user interface.
