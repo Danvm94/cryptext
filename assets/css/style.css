@@ -203,3 +203,28 @@ body {
 .encrypt-box__option {
   display: none; /* Hide the circle radio default viewer */
 }
+
+/* Caesar About div section */
+.caesar-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #3e4357;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0px 00px;
+}
+
+/* Caesar About Article */
+.caesar-about__article {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Caesar About Title h2 */
+.caesar-about__title-two {
+  text-align: center;
+}
