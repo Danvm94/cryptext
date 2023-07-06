@@ -228,3 +228,28 @@ body {
 .caesar-about__title-two {
   text-align: center;
 }
+
+/* Vigenere About div section */
+.vigenere-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #3e4357;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0px 00px;
+}
+
+/* Vigenere About Article */
+.vigenere-about__article {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Vigenere About Title h2 */
+.vigenere-about__title-two {
+  text-align: center;
+}
