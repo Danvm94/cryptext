@@ -1,4 +1,5 @@
-<h1 align="center">Cryptext Website</h1>
+# CrypText Website
+
 [View the live project here.](https://danvm94.github.io/cryptext/)
 
 Cryptext is a versatile website that enables you to encrypt text messages using two different encryption methods: Caesar and Vigenere. The website provides a user-friendly interface where you can input your text and select the desired encryption method. Encrypting your text messages offers several advantages, including enhanced security and privacy. Cryptext simplifies the encryption process, allowing you to protect your messages with just a few clicks.
@@ -32,7 +33,7 @@ Cryptext is a versatile website that enables you to encrypt text messages using 
 
     The colors palette used in this project was selected and viewed using the Colormind website.
 
-    <img src="./readme/colormind.png">
+    ![colormind](./readme/colormind.png)
 
     1. ![#000000](https://placehold.co/15x15/000000/000000.png) `#000000`: This black colour is used as the background colour for the website, creating a sleek and modern look.
     2. ![#ffffff](https://placehold.co/15x15/ffffff/ffffff.png) `#ffffff`: This pure white colour is used for text and content, ensuring clarity and readability.
@@ -44,16 +45,19 @@ Cryptext is a versatile website that enables you to encrypt text messages using 
 
     - The main font used for the website is "Roboto" from Google Fonts. It is a clean and modern sans-serif typeface that enhances the overall readability and visual appeal of the content.
 
-    <img src="./readme/roboto.png">
+    ![roboto](./readme/roboto.png)
 
   - #### Imagery
 
     - Imagery plays a vital role in capturing users' attention and creating an engaging visual experience on the Cryptext website. Both website pages feature a prominent top icon that includes an image of a lock and the text "CrypText". This visual element serves as the identity of the website and project, representing the focus on encryption and security. It provides a recognizable and cohesive branding throughout the website, reinforcing the purpose and theme of the project.
 
-    <img src="./readme/logo.png">
+    ![logo](./readme/logo.png)
 
 ### Wireframes
 
-Balsamiq Wireframe software was utilized to design the initial wireframe for the website, outlining the conceptual layout and structure. While some modifications were made during the development process, the wireframe served as a foundation for the final website design. Here is an image showcasing the wireframe for the index.html page:
+Balsamiq Wireframe software was utilized to design the initial wireframe for the website, outlining the conceptual layout and structure. While some modifications were made during the development process, the wireframe served as a foundation for the final website design.
+
+![index.html](./readme/index-wireframe.png)
+![about.html](./readme/about-wireframe.png)
 
 The wireframe visually represents the placement of various elements, such as navigation, content sections, and other components, providing a clear blueprint for the website's overall structure and user interface.
