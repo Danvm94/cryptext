@@ -22,6 +22,12 @@ body {
   display: flex;
   justify-content: center;
 }
+/* Logo home <a> styles */
+.logo__home {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
 /* Brief About styles */
 .brief-about {
   display: flex;
