@@ -61,3 +61,32 @@ Balsamiq Wireframe software was utilized to design the initial wireframe for the
 ![about.html](./readme/about-wireframe.png)
 
 The wireframe visually represents the placement of various elements, such as navigation, content sections, and other components, providing a clear blueprint for the website's overall structure and user interface.
+
+## Features
+
+- Responsive Design: It is designed to be fully responsive, ensuring optimal viewing and functionality across various device sizes. Whether accessed from a desktop computer, tablet, or smartphone, users can enjoy a seamless and immersive experience.
+
+- Interactive Elements: It incorporates interactive elements to enhance user engagement. Interactive forms and buttons, the website offers a dynamic and interactive interface, allowing users to easily interact with the encryption functionality and explore the content.
+
+## Technologies Used
+
+### Languages Used
+
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+- [Java Script](https://en.wikipedia.org/wiki/JavaScript)
+
+### Frameworks, Libraries & Programs Used
+
+1. [BEM Methodology:](https://getbem.com/introduction/)
+   - BEM Methodology was used for structuring and organizing the CSS codebase, providing a modular and scalable approach to styling components.
+1. [Google Fonts:](https://fonts.google.com/)
+   - Google fonts were used to import the 'Titillium Web' font into the style.css file which is used on all pages throughout the project.
+1. [Font Awesome:](https://fontawesome.com/)
+   - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
+1. [Git](https://git-scm.com/)
+   - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+1. [GitHub:](https://github.com/)
+   - GitHub is used to store the projects code after being pushed from Git.
+1. [Balsamiq:](https://balsamiq.com/)
+   - Balsamiq was used to create the [wireframes](https://github.com/) during the design process.
