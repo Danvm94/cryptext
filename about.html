@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrypText</title>
+    <!-- meta description for website -->
+    <meta name="description"
+        content="CrypText is a comprehensive website offering secure text message encryption using Caesar, Vigenere algorithms. Protect your privacy, enhance data security, and ensure confidentiality with our versatile encryption methods.">
+    <!-- meta keywords for website -->
+    <meta name="keywords"
+        content="CrypText, text message encryption, secure communication, Caesar cipher, Vigenere cipher, privacy, data security, confidentiality, encryption methods">
+    <!-- set the icon on the bookmark -->
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/images/locker.ico">
+    <!-- CSS Style for webpage -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- font awesome script  -->
+    <script src="https://kit.fontawesome.com/0202f769a6.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!-- Section for the main website's logo -->
+    <div class="logo">
+        <img class="logo__image" src="./assets/images/locker.ico" alt="a blue lock" width="100" height="100">
+        <h1 class="logo__title">CypherText</h1>
+    </div>
+    <!-- Brief about section with some information about the website -->
+    <div class="brief-about">
+        <h2 class="brief-about__title-two">About</h2>
+        <p class="brief-about__text">CrypText is a versatile website that empowers you to encrypt text messages using
+            two different encryption methods: Caesar and Vigenere. Encrypting your text messages offers
+            several advantages, for more information, please check our <a href="./about.html" class="brief-about__link"
+                target="_blank" rel="noopener" aria-label="Visit our about page (opens in a new tab)">about</a> session.
+        </p>
+    </div>
+    <div class="caesar-about">
+        <article class="caesar-about__article">
+            <h2 class="caesar-about__title-two">Caesar Cipher</h2>
+            <p class="brief-about__text">In cryptography, a Caesar cipher, also known as Caesar's cipher, the shift
+                cipher, Caesar's code, or
+                Caesar shift, is one of the simplest and most widely known encryption techniques. It is a type of
+                substitution cipher in which each letter in the plaintext is replaced by a letter some fixed number of
+                positions down the alphabet. For example, with a left shift of 3, D would be replaced by A, E would
+                become B, and so on. The method is named after Julius Caesar, who used it in his private
+                correspondence.
+
+                The encryption step performed by a Caesar cipher is often incorporated as part of more complex schemes,
+                such as the Vigenère cipher, and still has modern application in the ROT13 system. As with all
+                single-alphabet substitution ciphers, the Caesar cipher is easily broken and in modern practice offers
+                essentially no communications security.</p>
+        </article>
+    </div>
+    <div class="vigenere-about">
+        <article class="vigenere-about__article">
+            <h2 class="vigenere-about__title-two">Vigenere Cipher</h2>
+            <p class="brief-about__text">The Vigenère cipher is a method of
+                encrypting alphabetic text where each letter of the plaintext is encoded with a different Caesar cipher,
+                whose increment is determined by the corresponding letter of another text, the key.
+
+                For example, if the plaintext is attacking tonight and the key is OCULORHINOLARINGOLOGY, then
+
+                the first letter a of the plaintext is shifted by 14 positions in the alphabet (because the first letter
+                O of the key is the 14th letter of the alphabet, counting from 0), yielding o;
+                the second letter t is shifted by 2 (because the second letter C of the key means 2) yielding v;
+                the third letter t is shifted by 20 (U) yielding n, with wrap-around;
+                and so on; yielding the message ovnlqbpvt eoeqtnh. If the recipient of the message knows the key, they
+                can recover the plaintext by reversing this process.
+
+                The Vigenère cipher is therefore a special case of a polyalphabetic substitution.[1][2]
+
+                First described by Giovan Battista Bellaso in 1553, the cipher is easy to understand and implement, but
+                it resisted all attempts to break it until 1863, three centuries later. This earned it the description
+                le chiffrage indéchiffrable (French for 'the indecipherable cipher'). Many people have tried to
+                implement encryption schemes that are essentially Vigenère ciphers.[3] In 1863, Friedrich Kasiski was
+                the first to publish a general method of deciphering Vigenère ciphers.
+
+                In the 19th century, the scheme was misattributed to Blaise de Vigenère (1523–1596) and so acquired its
+                present name.</p>
+        </article>
+    </div>
+</body>
+
+</html>
