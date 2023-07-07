@@ -50,32 +50,36 @@
                     text (Encrypt)
                     or decrypt an existing text
                     (Decrypt).</p>
-                <label class="encrypt-box__radio-button">
-                    <input class="encrypt-box__option" type="radio" id="encrypt" name="encryption" value="encrypt"
-                        onclick="updateEncryptionTypeContainer()" required>
-                    Encrypt
-                </label>
-                <label class="encrypt-box__radio-button">
-                    <input class="encrypt-box__option" type="radio" id="decrypt" name="encryption" value="decrypt"
-                        onclick="updateEncryptionTypeContainer()">
-                    Decrypt
-                </label>
+                <ul class="encrypt-box__selections">
+                    <li class="encrypt-box__selection">
+                        <input class="encrypt-box__option" type="radio" id="encrypt" name="encryption" value="encrypt"
+                            onclick="updateEncryptionTypeContainer()">
+                        <label class="encrypt-box__option-label" for="encrypt">Encrypt</label>
+                    </li>
+                    <li class="encrypt-box__selection">
+                        <input class="encrypt-box__option" type="radio" id="decrypt" name="encryption" value="decrypt"
+                            onclick="updateEncryptionTypeContainer()">
+                        <label class="encrypt-box__option-label" for="decrypt">Decrypt</label>
+                    </li>
+                </ul>
             </div>
             <div class="encrypt-box__encryption-type" id="encryptionTypeContainer">
                 <h3 class="encrypt-box__title-three">Encryption Type</h3>
                 <p class="encrypt-box__info-text" id="info-two"> <i class="fa-solid fa-circle-info"></i> Please select
                     the
                     cryptography type: Caesar or Vigenere.</p>
-                <label class="encrypt-box__radio-button">
-                    <input class="encrypt-box__option" type="radio" id="caesar" name="encryption-type" value="caesar"
-                        onclick="updateEncryptionKeyContainer('caesar')" required>
-                    Caesar Cipher
-                </label>
-                <label class="encrypt-box__radio-button">
-                    <input class="encrypt-box__option" type="radio" id="vigenere" name="encryption-type"
-                        value="vigenere" onclick="updateEncryptionKeyContainer('vigenere')">
-                    Vigenère Cipher
-                </label>
+                <ul class="encrypt-box__selections">
+                    <li class="encrypt-box__selection">
+                        <input class="encrypt-box__option" type="radio" id="caesar" name="encryption-type"
+                            value="caesar" onclick="updateEncryptionKeyContainer('caesar')">
+                        <label class="encrypt-box__option-label" for="caesar">Caesar</label>
+                    </li>
+                    <li class="encrypt-box__selection">
+                        <input class="encrypt-box__option" type="radio" id="vigenere" name="encryption-type"
+                            value="vigenere" onclick="updateEncryptionKeyContainer('vigenere')">
+                        <label class="encrypt-box__option-label" for="vigenere">Vigenere</label>
+                    </li>
+                </ul>
             </div>
             <div class="encrypt-box__encryption-key" id="encryptionKeyContainer">
 

@@ -199,17 +199,50 @@ body {
   margin: 0px;
   transition: opacity 2s;
 }
-/* Encrypt Box radio button change when selected */
-/* When encrypt-box__option is checked, it will look after encrypt-box__radio-button to change it's properties*/
-.encrypt-box__radio-button:has(.encrypt-box__option:checked) {
-  background-color: #ffffff;
+/* Encrypt Box Selections unordered list */
+.encrypt-box__selections {
+  display: flex;
+  justify-self: center;
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+/* Encrypt Box Selections list item */
+.encrypt-box__selection {
+  width: 50%;
+}
+/* Encrypt Box Selections option (hide the circle default layout on radio) */
+.encrypt-box__option {
+  display: none;
+}
+/* Encrypt Box Selections option label */
+.encrypt-box__option-label {
+  display: flex;
+  margin: 5px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #92939d;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #92939d;
+  color: #000000;
+  font-weight: 600;
+  justify-content: center;
+}
+/* Encrypt Box Selections option label hover effect*/
+.encrypt-box__option-label:hover {
+  border-color: #938d96;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-/* Encryot Box Radio Option style*/
-.encrypt-box__option {
-  display: none; /* Hide the circle radio default viewer */
+/* Encrypt Box Selections option label checked effect*/
+.encrypt-box__option:checked + .encrypt-box__option-label {
+  background-color: #ffffff;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #938d96;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
 /* Caesar About div section */
 .caesar-about {
   display: flex;
