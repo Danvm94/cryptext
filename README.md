@@ -186,7 +186,7 @@ The Google Chrome built-in Lighthouse testing tool was utilized to assess the pe
 - During the CSS validator testing, an error and two warnings were found:
   1. ![Parse Erro](./readme/css-validator-error-1.png)<br />
   Parse Error - The error was related to the code ".encrypt-box__radio-button:has(.encrypt-box__option:checked)". This error occurred because the CSS validator does not recognize the ":has" function. Upon further investigation, it was found that Firefox does not support the ":has" function, which may have caused the warning message.
-  To address this issue, a different approach was taken by modifying the HTML and CSS code. More details about the changes made can be found in this [git commit link](https://github.com/Danvm94/cryptext/commit/6949db9b48c8b17cbdbd7626581cef47582f3ca7)
+  To address this issue, a different approach was taken by modifying the HTML and CSS code. More details about the changes made can be found in this [git commit](https://github.com/Danvm94/cryptext/commit/6949db9b48c8b17cbdbd7626581cef47582f3ca7).
   
   2. ![Warning](./readme/css-validator-warning-1.png)<br />
   CSS class .encrypt-box__radio-button, indicating "Same color for background-color and border-color". This warning occurred because the background-color and border-color were initially set to the same value. The reason for this was to address the issue of size changing when applying the border properties after the :checked selector.
@@ -196,4 +196,73 @@ The Google Chrome built-in Lighthouse testing tool was utilized to assess the pe
   CSS class .encrypt-box__radio-button, indicating "Same color for background-color and border-color". This warning occurred because the background-color and border-color were initially set to the same value. The reason for this was to address the issue of size changing when applying the border properties after the :checked selector.
   To resolve this warning, a modification was made in this [git commit](https://github.com/Danvm94/cryptext/commit/c6cfe59a9d01f0403b78e4cc6fd195b9ed2f1e3e). The solution involved applying a transparent color to the border-color property, ensuring a distinct visual separation while maintaining the desired design.
 
+## Deployment
 
+### Forking the GitHub Repository
+
+By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/Danvm94/cryptext)
+2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
+3. You should now have a copy of the original repository in your GitHub account.
+
+### GitHub Pages
+
+The project was deployed to GitHub Pages using the following steps...
+
+1. Log in to GitHub and locate your forked version of the "cryptext" project.
+2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
+3. Scroll down the Settings page until you locate the "Pages" Section.
+4. Under "Source", click the dropdown called "None" and select "Master Branch".
+5. The page will automatically refresh.
+6. Scroll back down through the page to locate the now published site link in the "Pages" section.
+
+### Making a Local Clone
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
+2. Under the repository name, click "Clone or download".
+3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+4. Open Git Bash
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type `git clone`, and then paste the URL you copied in Step 3.
+
+
+```
+$ git clone https://github.com/Danvm94/cryptext
+```
+
+7. Press Enter. Your local clone will be created.
+
+```
+$ git clone https://github.com/Danvm94/cryptext
+> Cloning into `CI-Clone`...
+> remote: Counting objects: 10, done.
+> remote: Compressing objects: 100% (8/8), done.
+> remove: Total 10 (delta 1), reused 10 (delta 1)
+> Unpacking objects: 100% (10/10), done.
+```
+Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
+
+## Credits
+
+### Code
+
+- [BEM Methodology](https://getbem.com/introduction/): BEM Methodology was used for structuring and organizing the CSS codebase, providing a modular and scalable approach to styling components.
+
+### Content
+
+- The definition and explanation of the Caesar and Vigenere encryption methods were obtained from Wikipedia. You can access the articles through the following links:
+  1. [Caesar cipher on Wikipedia](https://en.wikipedia.org/wiki/Caesar_cipher)
+  2. [Vigenere cipher on Wikipedia](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher)
+
+- Psychological properties of colours text in the README.md was found [here](http://www.colour-affects.co.uk/psychological-properties-of-colours)
+
+### Media
+
+- [Pixabay](https://pixabay.com/): For sourcing free images, Pixabay was utilized as the image provider for this purpose to the entire website.
+
+### Acknowledgements
+
+- My Mentor for continuous helpful feedback.
+- CodeInsitute Tutoring for their valuable tips on troubleshooting.
+- CodeInstitute Slack community for their quick and supportive responses.
