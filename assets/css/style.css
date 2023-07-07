@@ -200,7 +200,8 @@ body {
   transition: opacity 2s;
 }
 /* Encrypt Box radio button change when selected */
-.encrypt-box__option:checked + .encrypt-box__radio-button {
+/* When encrypt-box__option is checked, it will look after encrypt-box__radio-button to change it's properties*/
+.encrypt-box__radio-button:has(.encrypt-box__option:checked) {
   background-color: #ffffff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
