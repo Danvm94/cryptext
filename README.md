@@ -23,9 +23,8 @@ Cryptext is a versatile website that enables you to encrypt text messages using 
     3. As a Returning Visitor, I want to check for any updates or new features added to Cryptext since my last visit.
 
   - #### Frequent User Goals
-    1. As a Frequent User, I want to quickly encrypt texts using my preferred encryption method and settings.
-    2. As a Frequent User, I want to experiment with different encryption keys or parameters to enhance my security.
-    3. As a Frequent User, I want to easily share encrypted texts with others or recommend Cryptext to friends and colleagues.
+    1. As a Frequent User, I want to experiment with different encryption keys or parameters to enhance my security.
+    2. As a Frequent User, I want to easily share encrypted texts with others or recommend Cryptext to friends and colleagues.
 
 - ### Design
 
@@ -131,3 +130,46 @@ The Google Chrome built-in Lighthouse testing tool was utilized to assess the pe
 ![Report](./readme/about-mobile.png)
 
 - [Full Report](https://danvm94.github.io/cryptext/readme/about-mobile.html)
+
+### Testing User Stories from User Experience (UX) Section
+
+- #### First Time Visitor Goals
+  - As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about Cryptext.
+    1. Upon entering the CrypText website, users are immediately greeted with the prominent CrypText logo, which serves as the visual identity of the website. The CrypText logo is strategically positioned, and when clicked, it redirects users to the index.html (home page), providing a seamless and intuitive navigation experience. This allows users to easily return to the main page.
+    2. Below the CrypText logo, users will find an informative "About" section that offers a comprehensive overview of the website's purpose and the available encryption methods, namely Caesar and Vigenere. Additionally, there is a link within the "About" section that redirects users to the about.html page, where they can find more detailed information about both encryption methods. This allows users to delve deeper into the concepts and gain a better understanding of how the encryption process works.
+  - As a First Time Visitor, I want to be able to navigate through the site easily and find the desired information.
+    1. The navigation is seamless and user-friendly, ensuring that users never feel trapped or lost within the site. At the top of every page, users will find the CrypText logo, which serves as a clickable link that redirects them back to the home page (index.html). This feature provides a convenient and intuitive way for users to navigate back to the main page of the website, ensuring easy access to the core content and functionality.
+    2. Directly below the "About" section, you will find an interactive radio button selector. This user-friendly element allows users to choose between encryption direction, The options are accompanied by an informative text that provides guidance and clarification on the purpose and functionality of it.
+  - As a First Time Visitor, I want to quickly find and use the encryption methods available.
+    1. After selecting the encryption direction, user will be presented with two additional options to choose from. These options correspond to the encryption type, specifically Caesar and Vigenere. Similar to the previous selection, the options are accompanied by an informative text that assists users in making an informed decision. 
+    2. After selecting the encryption direction and encryption type, users will be presented with four new interactive elements. 
+    
+    The first element allows users to enter the shift number (for Caesar encryption) or the encryption key (for Vigenere encryption). This interactive element is accompanied by informative text that explains its purpose and provides instructions on how to use it effectively.
+
+    The second element is an input text area where users can enter the text they want to encrypt or decrypt. The input text area includes a placeholder text that guides users on what information they should enter.
+
+    The third element is a submit button that triggers the website to process the provided information and generate the encrypted or decrypted text. The result will be displayed after the input text area.
+
+    The fourth element is a clear button that allows users to easily clear all the text entered in the input text area and reset the encryption process.
+
+    These interactive elements provide a user-friendly interface for seamless interaction and facilitate the encryption and decryption process.
+
+- #### Returning Visitor Goals
+  - As a Returning Visitor, I want to explore different encryption methods and discover their applications.
+    1. Users can easily find information on how to use both encryption methods, Caesar and Vigenere, on the CrypText website. The instructions are available in two convenient locations.
+
+    Firstly, on the main index.html page, users can navigate thru the Encryption buttons and select the available options where they will find comprehensive information about it.
+
+    Secondly, users can access more in-depth information about the encryption methods on the about.html page. This dedicated page delves deeper into the intricacies of both Caesar and Vigenere encryption, providing additional examples, tips, and guidance for users who want a more thorough understanding.
+
+- As a Returning Visitor, I want to decrypt my previously encrypted texts.
+  1. Users can easily decrypt previously encrypted messages by navigating through the main page of the CrypText website.
+
+- As a Returning Visitor, I want to check for any updates or new features added to Cryptext since my last visit.
+  1. The available encryption methods are displayed straightforwardly after selecting the encryption direction.
+
+- #### Frequent User Goals
+  - As a Frequent User, I want to experiment with different encryption keys or parameters to enhance my security.
+  1. Users can easily interact with the encryption key or text presented on the screen.
+  - As a Frequent User, I want to easily share encrypted texts with others or recommend Cryptext to friends and colleagues.
+  1. The user can easily check the encryption key they are using and view the encrypted message, which they can then share with others.
