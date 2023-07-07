@@ -98,4 +98,36 @@ The wireframe visually represents the placement of various elements, such as nav
 The W3 HTML Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
 - [W3 HTML Validator](https://validator.w3.org/) - [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdanvm94.github.io%2Fpaulista-dishes%2F)
-- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - [Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fdanvm94.github.io%2Fpaulista-dishes%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - [Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fdanvm94.github.io%2Fcryptext%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+
+### Lighthouse Testing
+
+The Google Chrome built-in Lighthouse testing tool was utilized to assess the performance, accessibility, best practices and SEO aspects of the two available website pages. Below are the results obtained for each page, considering both the desktop and mobile versions.
+
+#### index.html
+
+##### Desktop
+
+![Report](./readme/index-desktop.png)
+
+- [Full Report](https://danvm94.github.io/cryptext/readme/index-desktop.html)
+
+##### Mobile
+
+![Report](./readme/index-mobile.png)
+
+- [Full Report](https://danvm94.github.io/cryptext/readme/index-mobile.html)
+
+#### about.html
+
+##### Desktop
+
+![Report](./readme/about-desktop.png)
+
+- [Full Report](https://danvm94.github.io/cryptext/readme/about-desktop.html)
+
+##### Mobile
+
+![Report](./readme/about-mobile.png)
+
+- [Full Report](https://danvm94.github.io/cryptext/readme/about-mobile.html)
