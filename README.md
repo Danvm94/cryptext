@@ -173,3 +173,27 @@ The Google Chrome built-in Lighthouse testing tool was utilized to assess the pe
   1. Users can easily interact with the encryption key or text presented on the screen.
   - As a Frequent User, I want to easily share encrypted texts with others or recommend Cryptext to friends and colleagues.
   1. The user can easily check the encryption key they are using and view the encrypted message, which they can then share with others.
+
+### Further Testing
+
+- The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
+- The website was viewed on a variety of devices such as Desktop, Laptop, iPhone7, iPhone 8 & iPhoneX.
+- A large amount of testing was done to ensure that all pages were linking correctly.
+- Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
+
+### Fixed Bugs
+
+- During the CSS validator testing, an error and two warnings were found:
+  1. ![Parse Erro](./readme/css-validator-error-1.png)<br />
+  Parse Error - The error was related to the code ".encrypt-box__radio-button:has(.encrypt-box__option:checked)". This error occurred because the CSS validator does not recognize the ":has" function. Upon further investigation, it was found that Firefox does not support the ":has" function, which may have caused the warning message.
+  To address this issue, a different approach was taken by modifying the HTML and CSS code. More details about the changes made can be found in this [git commit link](https://github.com/Danvm94/cryptext/commit/6949db9b48c8b17cbdbd7626581cef47582f3ca7)
+  
+  2. ![Warning](./readme/css-validator-warning-1.png)<br />
+  CSS class .encrypt-box__radio-button, indicating "Same color for background-color and border-color". This warning occurred because the background-color and border-color were initially set to the same value. The reason for this was to address the issue of size changing when applying the border properties after the :checked selector.
+  To resolve this warning, a modification was made in this [git commit](https://github.com/Danvm94/cryptext/commit/c6cfe59a9d01f0403b78e4cc6fd195b9ed2f1e3e). The solution involved applying a transparent color to the border-color property, ensuring a distinct visual separation while maintaining the desired design.
+
+  3. ![Warning](./readme/css-validator-warning-2.png)<br />
+  CSS class .encrypt-box__radio-button, indicating "Same color for background-color and border-color". This warning occurred because the background-color and border-color were initially set to the same value. The reason for this was to address the issue of size changing when applying the border properties after the :checked selector.
+  To resolve this warning, a modification was made in this [git commit](https://github.com/Danvm94/cryptext/commit/c6cfe59a9d01f0403b78e4cc6fd195b9ed2f1e3e). The solution involved applying a transparent color to the border-color property, ensuring a distinct visual separation while maintaining the desired design.
+
+
