@@ -78,6 +78,8 @@ Cryptext is a versatile website that enables you to encrypt text messages using 
 
 - Responsive Design: The project is responsive and optimized for various device sizes, ensuring a seamless user experience across desktop, tablet, and mobile devices.
 
+- Input Validator: The project includes an input validator function that checks if the user has provided the necessary information for encryption/decryption. This includes checking if the input text and shift/key are provided.
+
 ## Usage
 Usage of the CryptText application typically involves the following steps:
 1. Accessing the Application: Users can access the CryptText application by visiting the [website link](https://danvm94.github.io/cryptext/).
