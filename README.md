@@ -180,10 +180,11 @@ The wireframe visually represents the placement of various elements, such as nav
 
 ### Code Testing
 
-The W3 HTML Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
+The W3 HTML Validator and W3C CSS Validator Services were used to validate every page of the project and ensure that there were no syntax errors. Additionally, JSHint was used to validate the JavaScript code and ensure adherence to best practices and coding standards. These validation processes were performed to maintain code quality, improve compatibility, and ensure a smooth user experience.
 
 - [W3 HTML Validator](https://validator.w3.org/) - [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdanvm94.github.io%2Fpaulista-dishes%2F)
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - [Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fdanvm94.github.io%2Fcryptext%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- JSHint - ![JSHint]()
 
 ### Lighthouse Testing
 
@@ -419,6 +420,14 @@ The Google Chrome built-in Lighthouse testing tool was utilized to assess the pe
   3. ![Warning](./readme/css-validator-warning-2.png)<br />
   CSS class .encrypt-box__radio-button, indicating "Same color for background-color and border-color". This warning occurred because the background-color and border-color were initially set to the same value. The reason for this was to address the issue of size changing when applying the border properties after the :checked selector.
   To resolve this warning, a modification was made in this [git commit](https://github.com/Danvm94/cryptext/commit/c6cfe59a9d01f0403b78e4cc6fd195b9ed2f1e3e). The solution involved applying a transparent color to the border-color property, ensuring a distinct visual separation while maintaining the desired design.
+
+- During the JSHint testing, numbers warning were found:
+  1. `'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz)`.
+  The specific message is indicating that the use of the let keyword, which is part of the ES6 (ECMAScript 2015) specification, may cause an error if the JSHint configuration is not set to support ES6 syntax. To resolve this warning, a modification was made in this [git commit](https://github.com/Danvm94/cryptext/commit/13cc23acd0ff83c94e96baa708122c326c8a5659). The solution involved applying a commentary to the top of the JavaScript with the following content:
+  `/* jshint esversion: 6 */`
+  This commentary inform JSHint that ECMAScript 2015 (ES6) is in use.
+
+
 
 ## Deployment
 

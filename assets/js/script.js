@@ -1,4 +1,5 @@
 // Wait for the DOM to finish loading before running the game
+/* jshint esversion: 6 */
 document.addEventListener("DOMContentLoaded", function () {
   // Change the first part Encryption / Decryption to visible:
   opacityChange(
