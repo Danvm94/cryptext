@@ -12,9 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
  * It receives an input parameter called 'encryption' which should be set to either 'encrypt' or 'decrypt'.
  * Based on the chosen option, the method will perform encryption or decryption on the text using the Caesar Cipher technique.
  */
-function caesarEncryption(encryption, textInput) {
+function caesarEncryption(encryption, textInput, shift) {
   let outputResult = "";
-  let shift = parseInt(document.getElementById("key").value);
   for (let index = 0; index < textInput.length; index++) {
     let char = textInput[index];
     let charUppercase = char === char.toUpperCase();
@@ -45,9 +44,8 @@ function caesarEncryption(encryption, textInput) {
  * encryption (indicating the operation to perform, either "encrypt" or "decrypt")
  * and textInput (the text to be encrypted or decrypted).
  */
-function vigenereEncryption(encryption, textInput) {
+function vigenereEncryption(encryption, textInput, key) {
   let outputResult = "";
-  let key = document.getElementById("key").value.toUpperCase();
   let keyIndex = 0;
 
   for (let i = 0; i < textInput.length; i++) {
@@ -94,12 +92,20 @@ function generateResult() {
   let textInput = document.getElementById("text-input").value;
   let outputResult;
   if (encryptionType === "caesar") {
-    outputResult = caesarEncryption(encryption, textInput);
+    let key = parseInt(document.getElementById("key").value);
+    if (!checkUserInput(key, textInput)) {
+      return;
+    }
+    outputResult = caesarEncryption(encryption, textInput, key);
     // Hide the info-three
     opacityChange("hide", document.getElementById("info-three"));
     showResult(outputResult);
   } else {
-    outputResult = vigenereEncryption(encryption, textInput);
+    let key = document.getElementById("key").value.toUpperCase();
+    if (!checkUserInput(key, textInput)) {
+      return;
+    }
+    outputResult = vigenereEncryption(encryption, textInput, key);
     // Hide the info-three
     opacityChange("hide", document.getElementById("info-three"));
     showResult(outputResult);
@@ -172,4 +178,17 @@ function updateEncryptionKeyContainer(encryption) {
 function updateEncryptionTypeContainer() {
   opacityChange("show", document.getElementById("encryptionTypeContainer"));
   opacityChange("hide", document.getElementById("info-one"));
+}
+/**
+ * Checks if there is valid input text and a key.
+ */
+function checkUserInput(key, textInput) {
+  if (key === "") {
+    alert("Please provide a shift/key.");
+    return false;
+  } else if (textInput === "") {
+    alert("Please provide an input text.");
+    return false;
+  }
+  return true;
 }
