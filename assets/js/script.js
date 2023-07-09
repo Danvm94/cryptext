@@ -22,13 +22,17 @@ function caesarEncryption(encryption, textInput) {
     let charUnicode = char.charCodeAt(0);
 
     if (charUnicode >= 65 && charUnicode <= 90) {
-      let newChar =
-        encryption === "encrypt"
-          ? ((charUnicode - 65 + shift) % 26) + 65
-          : ((charUnicode - 65 - shift + 26) % 26) + 65;
-      charUppercase
-        ? (outputResult += String.fromCharCode(newChar))
-        : (outputResult += String.fromCharCode(newChar).toLowerCase());
+      let newChar;
+      if (encryption === "encrypt") {
+        newChar = ((charUnicode - 65 + shift) % 26) + 65;
+      } else {
+        newChar = ((charUnicode - 65 - shift + 26) % 26) + 65;
+      }
+      if (charUppercase) {
+        outputResult += String.fromCharCode(newChar);
+      } else {
+        outputResult += String.fromCharCode(newChar).toLowerCase();
+      }
     } else {
       outputResult += char;
     }
@@ -56,14 +60,19 @@ function vigenereEncryption(encryption, textInput) {
     let keyCharUnicode = keyChar.charCodeAt(0);
 
     if (textInputCharUnicode >= 65 && textInputCharUnicode <= 90) {
-      let newChar =
-        encryption === "encrypt"
-          ? ((textInputCharUnicode - 65 + (keyCharUnicode - 65)) % 26) + 65
-          : ((textInputCharUnicode - 65 - (keyCharUnicode - 65) + 26) % 26) +
-            65;
-      textInputCharUppercase
-        ? (outputResult += String.fromCharCode(newChar))
-        : (outputResult += String.fromCharCode(newChar).toLowerCase());
+      let newChar;
+      if (encryption === "encrypt") {
+        newChar =
+          ((textInputCharUnicode - 65 + (keyCharUnicode - 65)) % 26) + 65;
+      } else {
+        newChar =
+          ((textInputCharUnicode - 65 - (keyCharUnicode - 65) + 26) % 26) + 65;
+      }
+      if (textInputCharUppercase) {
+        outputResult += String.fromCharCode(newChar);
+      } else {
+        outputResult += String.fromCharCode(newChar).toLowerCase();
+      }
       keyIndex++;
     } else {
       outputResult += String.fromCharCode(textInputCharUnicode);
@@ -83,6 +92,7 @@ function generateResult() {
     'input[name="encryption-type"]:checked'
   ).value;
   let textInput = document.getElementById("text-input").value;
+  let outputResult;
   if (encryptionType === "caesar") {
     outputResult = caesarEncryption(encryption, textInput);
     // Hide the info-three

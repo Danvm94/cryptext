@@ -356,8 +356,8 @@ The Google Chrome built-in Lighthouse testing tool was utilized to assess the pe
       <tr>
         <td>This is a text!</td>
         <td>BRAVO</td>
-        <td>Uyin wt r tzgu!</td>
-        <td>Uyin wt r tzgu!</td>
+        <td>Uyin wt r tzlu!</td>
+        <td>Uyin wt r tzlu!</td>
         <td>Pass</td>
       </tr>
       <tr>
@@ -388,7 +388,7 @@ The Google Chrome built-in Lighthouse testing tool was utilized to assess the pe
           <td>Pass</td>
         </tr>
         <tr>
-          <td>Uyin wt r tzgu!</td>
+          <td>Uyin wt r tzlu!</td>
           <td>BRAVO</td>
           <td>This is a text!</td>
           <td>This is a text!</td>
@@ -423,9 +423,11 @@ The Google Chrome built-in Lighthouse testing tool was utilized to assess the pe
 
 - During the JSHint testing, numbers warning were found:
   1. `'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz)`.
-  The specific message is indicating that the use of the let keyword, which is part of the ES6 (ECMAScript 2015) specification, may cause an error if the JSHint configuration is not set to support ES6 syntax. To resolve this warning, a modification was made in this [git commit](https://github.com/Danvm94/cryptext/commit/13cc23acd0ff83c94e96baa708122c326c8a5659). The solution involved applying a commentary to the top of the JavaScript with the following content:
+  The specific message is indicating that the use of the let keyword, which is part of the ES6 (ECMAScript 2015) specification, may cause an error if the JSHint configuration is not set to support ES6 syntax. To resolve this warning, a modification was made in this [git commit](https://github.com/Danvm94/cryptext/commit/8d36b6cbe26865247c4682db3e9da46f5b3dd43c). The solution involved applying a commentary to the top of the JavaScript with the following content:
   `/* jshint esversion: 6 */`
   This commentary inform JSHint that ECMAScript 2015 (ES6) is in use.
+  2. `Misleading line break before '?'; readers may interpret this as an expression boundary` was resolved by making a modification in this git commit. To address this warning, the code was rewritten using if and else statements instead of the ternary operator. This change clarifies the logic and eliminates any potential confusion caused by the line break.
+
 
 
 
