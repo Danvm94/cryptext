@@ -2,13 +2,104 @@
 
 [View the live project here.](https://danvm94.github.io/cryptext/)
 
+<h2 align="center"><img src="./readme/responsive.png"></h2>
+
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#description">Description</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#usage">Usage</a></li>
+    <li>
+      <a href="#user-experience-(ux)">User Experience (UX)</a>
+      <ul>
+        <li><a href="#user-stories">User Stories</a></li>
+        <li><a href="#design">Design</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#technologies-used">Technologies Used</a>
+      <ul>
+        <li><a href="#languages-used">Languages Used</a></li>
+        <li><a href="#frameworks-libraries--programs-used">Frameworks, Libraries & Programs Used</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#testing">Testing</a>
+      <ul>
+        <li><a href="#code-testing">Code Testing</a></li>
+        <li><a href="#lighthouse-testing">Light House Testing</a></li>
+        <li><a href="#testing-user-stories-from-user-experience-ux-section">Testing User Stories from User Experience (UX) Section</a></li>
+        <li><a href="#further-testing">Further Testing</a></li>
+        <li><a href="#fixed-bugs">Fixed Bugs</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#deployment">Deployment</a>
+      <ul>
+        <li><a href="#forking-the-github-repository">Forking the GitHub Repository</a></li>
+        <li><a href="#github-pages">GitHub Pages</a></li>
+        <li><a href="#making-a-local-clone">Making a Local Clone</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#credits">Credits</a>
+      <ul>
+        <li><a href="#code">Code</a></li>
+        <li><a href="#content">Content</a></li>
+        <li><a href="#media">Media</a></li>
+        <li><a href="#acknowledgmentes">Acknowledgements</a></li>
+      </ul>
+    </li>
+  </ol>
+</details>
+
+## Description
+
 Cryptext is a versatile website that enables you to encrypt text messages using two different encryption methods: Caesar and Vigenere. The website provides a user-friendly interface where you can input your text and select the desired encryption method. Encrypting your text messages offers several advantages, including enhanced security and privacy. Cryptext simplifies the encryption process, allowing you to protect your messages with just a few clicks.
 
-<h2 align="center"><img src="./readme/responsive.png"></h2>
+## Features
+- User-Friendly Interface: The project has a clean and intuitive user interface, making it easy for users to navigate and interact with the encryption options.
+![user-friendly](./readme/user-friendly.gif)
+
+- Encryption Methods: Cryptext offers two encryption methods, Caesar and Vigenere, allowing users to encrypt their text messages using these popular encryption algorithms.
+![encryption-methods](./readme/encryption-methods.png)
+
+- Input and Output: Cryptext provides an input text area where users can enter their desired text to be encrypted. After selecting the encryption method and providing the necessary key or shift number, the project generates the encrypted result, which is displayed for the user to see.
+![input-output](./readme/input-output.png)
+
+- Clear Functionality: Cryptext includes a clear button that allows users to easily clear the input text and the encrypted result, providing a convenient way to start a new encryption process.
+![clear-functionality](./readme/clear-functionality.gif)
+
+- Informative Text: Throughout the project, there are informative texts and descriptions that help users understand the purpose and usage of different encryption methods and input fields.
+![informative-text](./readme/informative-text.png)
+
+- Documentation: The project includes a detailed README.md file that provides an overview, instructions, and information about the project, making it easier for users to understand and use Cryptext.
+
+- Responsive Design: The project is responsive and optimized for various device sizes, ensuring a seamless user experience across desktop, tablet, and mobile devices.
+
+## Usage
+Usage of the CryptText application typically involves the following steps:
+1. Accessing the Application: Users can access the CryptText application by visiting the [website link](https://danvm94.github.io/cryptext/).
+
+2. Selecting Encryption or Decryption: Upon accessing the application, users are presented with the option to choose between encryption or decryption. They can select either "Encrypt" or "Decrypt" based on their desired action.
+
+3. Selecting Encryption Method: After choosing the encryption or decryption direction, users are then presented with options to select the encryption method. They can choose between Caesar or Vigenere encryption, depending on their specific requirements.
+
+4. Entering Text: Once the encryption method is selected, users can enter the text they want to encrypt or decrypt. The application provides an input field where users can type or paste the desired text.
+
+5. Providing Encryption Key: Depending on the chosen encryption method, users may need to provide an encryption key or shift number. This key determines the transformation applied to the text during encryption or decryption. Users can enter the key in the designated input field.
+
+6. Performing Encryption or Decryption: After selecting the encryption direction, encryption method, encryption key or shift, and entering the input text, users can initiate the encryption or decryption process by clicking the submit button. The application processes the input text using the selected encryption method and displays the encrypted or decrypted result.
+
+7. Clearing Input and Results: To start a new encryption or decryption process, users can utilize the clear button provided by the application. This action clears the input text field and the displayed results, allowing users to enter fresh input.
+ 
+8. Exploring Additional Information: The CryptText application offers additional features and resources to enhance the user experience. Users can explore "About" section to learn more about the encryption methods.
+
 
 ## User Experience (UX)
 
-- ### User stories
+- ### User Stories
 
   - #### First Time Visitor Goals
 
@@ -52,7 +143,7 @@ Cryptext is a versatile website that enables you to encrypt text messages using 
 
     ![logo](./readme/logo.png)
 
-### Wireframes
+  - #### Wireframes
 
 Balsamiq Wireframe software was utilized to design the initial wireframe for the website, outlining the conceptual layout and structure. While some modifications were made during the development process, the wireframe served as a foundation for the final website design.
 
@@ -61,11 +152,6 @@ Balsamiq Wireframe software was utilized to design the initial wireframe for the
 
 The wireframe visually represents the placement of various elements, such as navigation, content sections, and other components, providing a clear blueprint for the website's overall structure and user interface.
 
-## Features
-
-- Responsive Design: It is designed to be fully responsive, ensuring optimal viewing and functionality across various device sizes. Whether accessed from a desktop computer, tablet, or smartphone, users can enjoy a seamless and immersive experience.
-
-- Interactive Elements: It incorporates interactive elements to enhance user engagement. Interactive forms and buttons, the website offers a dynamic and interactive interface, allowing users to easily interact with the encryption functionality and explore the content.
 
 ## Technologies Used
 
