@@ -266,6 +266,144 @@ The Google Chrome built-in Lighthouse testing tool was utilized to assess the pe
 - The website was viewed on a variety of devices such as Desktop, Laptop, iPhone7, iPhone 8 & iPhoneX.
 - A large amount of testing was done to ensure that all pages were linking correctly.
 - Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
+- Tests based on various text inputs and encryption keys have been conducted to ensure the accuracy and correctness of the encryption and decryption results in the CryptText application. By testing different combinations of input texts and encryption keys, the application's functionality and reliability have been verified. Below is a chart summarizing the conducted tests:
+  <details>
+    <summary>Caesar Encrypt</summary>
+    <table>
+      <tr>
+        <th>Input Text</th>
+        <th>Shift</th>
+        <th>Expected Result</th>
+        <th>Result</th>
+        <th>Pass/Fail</th>
+      </tr>
+      <tr>
+        <td>Danilo</td>
+        <td>1</td>
+        <td>Ebojmp</td>
+        <td>Ebojmp</td>
+        <td>Pass</td>
+      </tr>
+      <tr>
+        <td>This is a text!</td>
+        <td>2</td>
+        <td>Vjku ku c vgzv!</td>
+        <td>Vjku ku c vguv!</td>
+        <td>Pass</td>
+      </tr>
+      <tr>
+        <td>Test number 3!</td>
+        <td>3</td>
+        <td>Whvw qxpehu 3!</td>
+        <td>Whvw qxpehu 3!</td>
+        <td>Pass</td>
+      </tr>
+    </table>
+  </details>
+
+  <details>
+    <summary>Caesar Decrypt</summary>
+    <table>
+      <tr>
+        <th>Input Text</th>
+        <th>Shift</th>
+        <th>Expected Result</th>
+        <th>Result</th>
+        <th>Pass/Fail</th>
+      </tr>
+      <tr>
+        <td>Ebojmp</td>
+        <td>1</td>
+        <td>Danilo</td>
+        <td>Danilo</td>
+        <td>Pass</td>
+      </tr>
+      <tr>
+        <td>Vjku ku c vgzv!</td>
+        <td>2</td>
+        <td>This is a text!</td>
+        <td>This is a text!</td>
+        <td>Pass</td>
+      </tr>
+      <tr>
+        <td>Whvw qxpehu 3!</td>
+        <td>3</td>
+        <td>Test number 3!</td>
+        <td>Test number 3!</td>
+        <td>Pass</td>
+      </tr>
+    </table>
+  </details>
+
+  <details>
+    <summary>Vigenere Encrypt</summary>
+    <table>
+      <tr>
+        <th>Input Text</th>
+        <th>Key</th>
+        <th>Expected Result</th>
+        <th>Result</th>
+        <th>Pass/Fail</th>
+      </tr>
+      <tr>
+        <td>Danilo</td>
+        <td>ALPHA</td>
+        <td>Dlcplo</td>
+        <td>Dlcplo</td>
+        <td>Pass</td>
+      </tr>
+      <tr>
+        <td>This is a text!</td>
+        <td>BRAVO</td>
+        <td>Uyin wt r tzgu!</td>
+        <td>Uyin wt r tzgu!</td>
+        <td>Pass</td>
+      </tr>
+      <tr>
+        <td>Test number 3!</td>
+        <td>CHARLIE</td>
+        <td>Vlsk ycqdlr 3!</td>
+        <td>Vlsk ycqdlr 3!</td>
+        <td>Pass</td>
+      </tr>
+  </table>
+  </details>
+
+  <details>
+      <summary>Vigenere Decrypt</summary>
+      <table>
+        <tr>
+          <th>Input Text</th>
+          <th>Key</th>
+          <th>Expected Result</th>
+          <th>Result</th>
+          <th>Pass/Fail</th>
+        </tr>
+        <tr>
+          <td>Dlcplo</td>
+          <td>ALPHA</td>
+          <td>Danilo</td>
+          <td>Danilo</td>
+          <td>Pass</td>
+        </tr>
+        <tr>
+          <td>Uyin wt r tzgu!</td>
+          <td>BRAVO</td>
+          <td>This is a text!</td>
+          <td>This is a text!</td>
+          <td>Pass</td>
+        </tr>
+        <tr>
+          <td>Vlsk ycqdlr 3!</td>
+          <td>CHARLIE</td>
+          <td>Test number 3!</td>
+          <td>Test number 3!</td>
+          <td>Pass</td>
+        </tr>
+    </table>
+    </details>
+
+
 
 ### Fixed Bugs
 
