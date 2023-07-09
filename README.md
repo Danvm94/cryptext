@@ -184,7 +184,7 @@ The W3 HTML Validator and W3C CSS Validator Services were used to validate every
 
 - [W3 HTML Validator](https://validator.w3.org/) - [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdanvm94.github.io%2Fpaulista-dishes%2F)
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - [Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fdanvm94.github.io%2Fcryptext%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
-- JSHint - ![JSHint]()
+- [JSHint](https://jshint.com/) - [Results](./readme/jshint.png)
 
 ### Lighthouse Testing
 
@@ -426,7 +426,7 @@ The Google Chrome built-in Lighthouse testing tool was utilized to assess the pe
   The specific message is indicating that the use of the let keyword, which is part of the ES6 (ECMAScript 2015) specification, may cause an error if the JSHint configuration is not set to support ES6 syntax. To resolve this warning, a modification was made in this [git commit](https://github.com/Danvm94/cryptext/commit/8d36b6cbe26865247c4682db3e9da46f5b3dd43c). The solution involved applying a commentary to the top of the JavaScript with the following content:
   `/* jshint esversion: 6 */`
   This commentary inform JSHint that ECMAScript 2015 (ES6) is in use.
-  
+
   2. `Misleading line break before '?'; readers may interpret this as an expression boundary` was resolved by making a modification in this [git commit](https://github.com/Danvm94/cryptext/commit/60410a81c44b4ace3ad41deebacfbfa5ce70d8eb). To address this warning, the code was rewritten using if and else statements instead of the ternary operator. This change clarifies the logic and eliminates any potential confusion caused by the line break.
 
 
