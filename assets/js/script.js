@@ -127,7 +127,9 @@ function showResult(outputResult) {
  */
 function clearText() {
   document.getElementById("text-input").value = "";
-  document.getElementById("text-output").innerHTML = "";
+  if (document.getElementById("text-output")) {
+    document.getElementById("text-output").innerHTML = "";
+  }
   opacityChange("hide", document.getElementById("result-div"));
 }
 /**
