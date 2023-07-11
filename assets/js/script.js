@@ -93,7 +93,7 @@ function generateResult() {
   let outputResult;
   if (encryptionType === "caesar") {
     let key = parseInt(document.getElementById("key").value);
-    if (!checkUserInput(key, textInput)) {
+    if (!checkUserInput(key, textInput, encryptionType)) {
       return;
     }
     outputResult = caesarEncryption(encryption, textInput, key);
@@ -102,7 +102,7 @@ function generateResult() {
     showResult(outputResult);
   } else {
     let key = document.getElementById("key").value.toUpperCase();
-    if (!checkUserInput(key, textInput)) {
+    if (!checkUserInput(key, textInput, encryptionType)) {
       return;
     }
     outputResult = vigenereEncryption(encryption, textInput, key);
@@ -182,15 +182,41 @@ function updateEncryptionTypeContainer() {
   opacityChange("hide", document.getElementById("info-one"));
 }
 /**
- * Checks if there is valid input text and a key.
- */
-function checkUserInput(key, textInput) {
-  if (key === "") {
+Validates the user input for encryption/decryption.
+@param {number|string} shiftKey - The encryption key or shift value.
+@param {string} inputText - The input text to be encrypted or decrypted.
+@param {string} encryptionMethod - The encryption method ("caesar" or "vigenere").
+@returns {boolean} - Returns true if the user input is valid, otherwise false.
+*/
+function checkUserInput(shiftKey, inputText, encryptionMethod) {
+  if (shiftKey === "") {
     alert("Please provide a shift/key.");
     return false;
-  } else if (textInput === "") {
+  } else if (inputText === "") {
     alert("Please provide an input text.");
     return false;
+  } else if (encryptionMethod.toLowerCase() === "caesar") {
+    if (!Number.isInteger(shiftKey) || shiftKey < 1 || shiftKey > 26) {
+      alert(
+        "For Caesar encryption, only integer numbers from 1 to 26 can be used as the shift key."
+      );
+      return false;
+    }
+  } else if (encryptionMethod.toLowerCase() === "vigenere") {
+    if (hasInvalidChars(shiftKey)) {
+      alert(
+        "For Vigenere encryption, only characters from A to Z can be used as the encryption key."
+      );
+      return false;
+    }
   }
   return true;
+}
+/**
+Checks if the given text contains any characters that are not uppercase A-Z characters.
+@param {string} text - The text to be checked.
+@returns {boolean} Returns true if the text contains invalid characters, false otherwise.
+*/
+function hasInvalidChars(text) {
+  return /[^A-Z]/.test(text);
 }
