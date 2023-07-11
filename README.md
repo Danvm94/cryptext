@@ -423,7 +423,7 @@ The Google Chrome built-in Lighthouse testing tool was utilized to assess the pe
   CSS class .encrypt-box__radio-button, indicating "Same color for background-color and border-color". This warning occurred because the background-color and border-color were initially set to the same value. The reason for this was to address the issue of size changing when applying the border properties after the :checked selector.
   To resolve this warning, a modification was made in this [git commit](https://github.com/Danvm94/cryptext/commit/c6cfe59a9d01f0403b78e4cc6fd195b9ed2f1e3e). The solution involved applying a transparent color to the border-color property, ensuring a distinct visual separation while maintaining the desired design.
 
-- During the JSHint testing, numbers warning were found:
+- During the JSHint testing, two warning were found:
   1. `'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz)`.
   The specific message is indicating that the use of the let keyword, which is part of the ES6 (ECMAScript 2015) specification, may cause an error if the JSHint configuration is not set to support ES6 syntax. To resolve this warning, a modification was made in this [git commit](https://github.com/Danvm94/cryptext/commit/8d36b6cbe26865247c4682db3e9da46f5b3dd43c). The solution involved applying a commentary to the top of the JavaScript with the following content:
   `/* jshint esversion: 6 */`
